@@ -2,19 +2,19 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    color: #000;
-    background: #d03cfd;
+    color: #F8F7F9;
+    background: #2B2D42;
 }
 
 .nav-logo {
     font-size: 2rem;
     font-weight: bold;
-    padding: 1.5rem;
-    margin-left: 4rem;
+    padding: 1.2rem;
+    margin-left: 3rem;
 }
 
 .nav-menu {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     padding: 1rem;
 }
 
@@ -25,10 +25,11 @@
     flex-direction: row;
 }
 
-.nav-menu li {
-    justify-content: space-between;
+.nav-menu li{
     margin-right: 4rem;
 }
+
+
 
 .nav-menu li:hover {
     font-weight: bold;
@@ -40,5 +41,5 @@
 .navOptions:active {
     text-decoration: none;
     text-decoration-style: none;
-    color: #000;
+    color: #F8F7F9;
 }
