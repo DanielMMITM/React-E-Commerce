@@ -1,0 +1,73 @@
+body{
+    place-content: center;
+    color: #fff;
+    background: radial-gradient(rgb(197, 127, 255), rgb(235, 240, 255));
+    
+}
+.containerForm {
+    justify-self: center;
+    align-self: center;
+    border: 2px solid rgb(255, 250, 250);
+    border-radius: 10px;
+    width: 50vh;
+    width: 70vh;
+    height: 70vh;
+}
+
+#content{
+    padding: 5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+h2{
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.fields{
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+}
+
+.fields legend{
+    font-weight: 500;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-bottom: 1rem;
+}
+
+input{
+    background-color: transparent;
+    border: none;
+    border-bottom: white 2px solid;
+}
+
+input:focus{
+    outline: none;
+}
+
+input::placeholder{
+    color: #fff;
+}
+
+#content form{
+    margin-bottom: 2rem;
+}
+
+a{
+    color: rgb(94, 94, 236);
+}
+
+button{
+    background-color: rgb(205, 67, 247);
+    border-radius: 10px;
+    border: 2px white solid;
+    color: white;
+    width: 8rem;
+    height: 2.5rem;
+    margin-top: 2rem;
+    align-self: center;
+    font-size: medium;
+}
+
