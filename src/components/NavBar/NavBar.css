@@ -1,0 +1,44 @@
+.nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: #000;
+    background: #d03cfd;
+}
+
+.nav-logo {
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 1.5rem;
+    margin-left: 4rem;
+}
+
+.nav-menu {
+    font-size: 1.3rem;
+    padding: 1rem;
+}
+
+.nav-menu ul {
+    list-style: none;
+    display: flex;
+    justify-content: end;
+    flex-direction: row;
+}
+
+.nav-menu li {
+    justify-content: space-between;
+    margin-right: 4rem;
+}
+
+.nav-menu li:hover {
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.navOptions:link,
+.navOptions:visited,
+.navOptions:active {
+    text-decoration: none;
+    text-decoration-style: none;
+    color: #000;
+}
