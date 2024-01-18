@@ -1,5 +1,7 @@
 body{
-    place-content: center;
+    display: grid;
+    justify-content: center;
+    align-items: center;
     color: #fff;
     background: radial-gradient(rgb(197, 127, 255), rgb(235, 240, 255));
     
@@ -12,6 +14,7 @@ body{
     width: 50vh;
     width: 70vh;
     height: 70vh;
+    margin-top: 10%;
 }
 
 #content{
@@ -20,7 +23,7 @@ body{
     flex-direction: column;
 }
 
-h2{
+h1{
     text-align: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
@@ -41,10 +44,12 @@ input{
     background-color: transparent;
     border: none;
     border-bottom: white 2px solid;
+    transition: all 0.3s ease;
 }
 
 input:focus{
     outline: none;
+    transform: scale(1.06);
 }
 
 input::placeholder{
@@ -52,22 +57,25 @@ input::placeholder{
 }
 
 #content form{
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
 }
 
 a{
     color: rgb(94, 94, 236);
+    width: 11rem;
 }
 
 button{
-    background-color: rgb(205, 67, 247);
+    background-color: rgb(221, 111, 255);
     border-radius: 10px;
     border: 2px white solid;
     color: white;
     width: 8rem;
     height: 2.5rem;
-    margin-top: 2rem;
+    margin-top: 4rem;
     align-self: center;
+    font-weight: bold;
     font-size: medium;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 

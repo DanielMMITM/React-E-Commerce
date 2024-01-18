@@ -6,7 +6,7 @@ export function Login() {
         <>
             <div className="containerForm" id='formLogin'>
                 <div id='content'>
-                    <h2>Log in </h2>
+                    <h1>Welcome </h1>
                     <form action='get'>
                         <div className='fields'>
                             <legend>Username</legend>
