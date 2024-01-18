@@ -1,7 +1,9 @@
 import './App.css'
+import React from 'react'
+import AppRouter from "/src/routes/AppRouter";
 
 function App() {
-    return (<AppRouter />)
+    return <AppRouter />
 }
 
 export default App
