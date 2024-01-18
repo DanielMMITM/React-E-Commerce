@@ -1,10 +1,10 @@
-import '/src/css/Login.css';
+import './Login.css';
 
 export function Login() {
     
     return (
-        <>
-            <div className="containerForm" id='formLogin'>
+        <body className='mainContainer'>
+            <div className="containerForm">
                 <div id='content'>
                     <h1>Welcome </h1>
                     <form action='get'>
@@ -21,7 +21,9 @@ export function Login() {
                     <button>Login</button>
                 </div>
             </div>
-        </>
+        </body>
+            
+        
     )
 }
 
