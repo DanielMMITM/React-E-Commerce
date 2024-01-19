@@ -1,14 +1,19 @@
+import { ScrollRestoration } from 'react-router-dom';
 import { CardInfo } from '/src/components/cardInfo/CardInfo';
 import { Button } from '/src/components/Button/Button';
 import './Home.css'
-import categoryImg from '/src/assets/img/medium.jpg';
+import categoryImg from '/src/assets/img/clothes.jpg';
 import car from '/src/assets/icons/car.png';
 import money from '/src/assets/icons/money.png';
 import privacy from '/src/assets/icons/privacy.png';
+import {NavBar} from '/src/components/NavBar/NavBar';
+import { Footer } from "/src/components/Footer/Footer";
 
 export function Home() {
     return (
         <>
+            <ScrollRestoration/>
+            <NavBar/>
             <header>
                 <div className='mainAd'>
                     <h1 className='mainTitle'>Get your favorite products at a small cost</h1>
@@ -55,6 +60,7 @@ export function Home() {
                     </div>
                 </div>
             </div>
+            <Footer/>
         </>            
     )
 }
