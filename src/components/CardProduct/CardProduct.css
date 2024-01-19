@@ -11,6 +11,11 @@
     transition: transform 330ms ease-in-out;
 }
 
+.product-card:hover {
+    box-shadow: 0 0 40px #92DCE5;
+    cursor: pointer;
+}
+
 .productCard-up{
     width: 100%;
     height: auto;

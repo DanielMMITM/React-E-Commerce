@@ -1,3 +1,61 @@
+.products-main{
+    display: flex;
+    flex-direction: column;
+}
+
+.productsBody{
+    display: flex;
+    height: auto;
+    width: 99.8%;
+    flex-direction: row;
+}
+
+.left{
+    border: 2px green solid;
+    width: 20%;
+    margin: 1.5rem 0 1.5rem 1rem;
+    border-radius: 10px;
+    background: linear-gradient(310deg, #F8F7F9 70%, #92DCE5 20%);;
+    box-shadow: inset 0 0 30px #2B2D42;
+}
+
+.filterTitleBox{
+    border-bottom: 1px solid#4c4e50;
+}
+
+.filterTitle{
+    color: #2B2D42;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.filterOptions{
+    margin-top: 20%;
+}
+
+.first{
+    border-top: 2px solid #2B2D42;
+}
+
+.option{
+    height: 2rem;
+    color: #2B2D42;
+    border-bottom: 2px solid #2B2D42;
+    padding: 1rem;
+}
+
+.option:hover{
+    border: 2px solid #2B2D42;
+    color: white;
+    background-color: #2B2D42;
+    cursor: pointer;
+    box-shadow:0 0 10px#92DCE5;
+    font-weight: bold;
+}
+
+.right {
+    width: 80%;
+    margin: 1.5rem 2rem
+}
 .productsContainer{
     padding: 2rem;
     display: flex;
@@ -8,10 +66,9 @@
 }
 
 .paginationContainer{
-    display: grid;
     justify-content: center;
     align-items: center;
-    margin: -3rem 2rem;
+    margin: -1rem 1rem -4rem;
     width: auto;
 }
 
@@ -61,7 +118,7 @@
     justify-content: center;
     list-style-type: none;
     position: relative;
-    width: 81rem;
+    width: 89.5rem;
 }
 
 .pagination-page {
