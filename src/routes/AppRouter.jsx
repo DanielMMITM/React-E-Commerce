@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Routes} from "react-router-dom";
 import Login from '/src/views/Login/Login';
-import Home from '/src/views/Home';
+import Home from '/src/views/Home/Home';
 import {NavBar} from '/src/components/NavBar/NavBar';
 
 const AppRouter = () =>{
