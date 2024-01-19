@@ -1,9 +1,11 @@
-import { NavBar } from "/src/components/NavBar/NavBar";
-import { Footer } from "/src/components/Footer/Footer";
+import {
+    CardProduct,
+    Footer,
+    NavBar
+} from "/src/components";
 import { ScrollRestoration } from 'react-router-dom';
 import { useState } from "react";
 import { useEffect } from "react";
-import { CardProduct } from "/src/components/CardProduct/CardProduct";
 import './Products.css'
 import ReactPaginate from "react-paginate";
 
@@ -21,6 +23,7 @@ export function Products({ itemsPerPage }) {
     };
 
     useEffect(() => {
+        window.scrollTo({top: 0});
         fetch('https://fakestoreapi.com/products')
             .then(res=>res.json())
             .then(data => {
