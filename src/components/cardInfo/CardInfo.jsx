@@ -5,7 +5,7 @@ export function CardInfo({ title, icon, text}) {
         <div>
             <div className='card'>
                 <div className='iconContainer'>
-                    <img src={icon} alt="" />
+                    <img src={icon} className='icon' />
                 </div>
                 <div className='info'>
                     <h2>{title}</h2>
