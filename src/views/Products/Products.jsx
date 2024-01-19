@@ -6,6 +6,7 @@ import {
 import { ScrollRestoration } from 'react-router-dom';
 import { useState } from "react";
 import { useEffect } from "react";
+import { useMemo } from "react";
 import './Products.css'
 import ReactPaginate from "react-paginate";
 
@@ -23,7 +24,6 @@ export function Products({ itemsPerPage }) {
     };
 
     useEffect(() => {
-        window.scrollTo({top: 0});
         fetch('https://fakestoreapi.com/products')
             .then(res=>res.json())
             .then(data => {
@@ -33,6 +33,10 @@ export function Products({ itemsPerPage }) {
             .catch(err => console.log(err))
     }, []);
 
+    useMemo(() => {
+        window.scrollTo({ top: 0 });
+    }, [currentItems]);
+
     return (
         <>
             <ScrollRestoration/>
@@ -40,15 +44,23 @@ export function Products({ itemsPerPage }) {
             <div className="productsContainer">
                 <CardProduct currentItems={currentItems} />
             </div>
-            <ReactPaginate
-                breakLabel="..."
-                nextLabel="next >"
+            <div className="paginationContainer">
+                <ReactPaginate
+                activeClassName={'item active '}
+                breakClassName={'item break-me '}
+                breakLabel={'...'}
+                containerClassName={'pagination'}
+                disabledClassName={'disabled-page'}
+                marginPagesDisplayed={2}
+                pageClassName={'item pagination-page '}
+                nextLabel="Next >>"
                 onPageChange={handlePageClick}
                 pageRangeDisplayed={3}
                 pageCount={pageCount}
-                previousLabel="< previous"
+                previousLabel="<< Previous"
                 renderOnZeroPageCount={null}
             />
+            </div>
             <Footer />
         </>
     )
