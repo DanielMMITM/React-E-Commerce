@@ -13,8 +13,8 @@ export const CardProduct = ({ currentItems }) => {
                     </div>
                     <div className='productCard-down'>
                         <div className='contentBox'>
-                            <h1 className='productTitle'>{product.title}</h1>
-                            <p className='description'>{product.description}</p>
+                                <h1 className='productTitle'>{product.title}</h1>
+                                <p className='description'>{product.description}</p>
                         </div>
                     </div>
                     <div className='contentBtn'>
