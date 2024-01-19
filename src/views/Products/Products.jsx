@@ -47,7 +47,7 @@ export function Products({ itemsPerPage }) {
             <div className="paginationContainer">
                 <ReactPaginate
                 activeClassName={'item active '}
-                breakClassName={'item break-me '}
+                breakClassName={'item'}
                 breakLabel={'...'}
                 containerClassName={'pagination'}
                 disabledClassName={'disabled-page'}
