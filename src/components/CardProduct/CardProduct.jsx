@@ -16,17 +16,18 @@ export const CardProduct = ({ currentItems }) => {
                             <h1 className='productTitle'>{product.title}</h1>
                             <p className='description'>{product.description}</p>
                         </div>
-                        <div className='contentBtn'>
-                            <span className='price'>${product.price}</span>
-                            <div className='btnBuy'>
-                                <Button
-                                    route='/'
-                                    text="Buy now"
-                                >
-                                </Button>
-                            </div>
+                    </div>
+                    <div className='contentBtn'>
+                        <span className='price'>${product.price}</span>
+                        <div className='btnBuy'>
+                            <Button
+                                route='/'
+                                text="Buy now"
+                            >
+                            </Button>
                         </div>
                     </div>
+                    
                 </div>
             ))}
         </>
