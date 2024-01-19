@@ -1,6 +1,6 @@
 import './CardInfo.css'
 
-export function CardInfo({ title, icon, text}) {
+export const CardInfo = ({ title, icon, text }) => {
     return (
         <div>
             <div className='card'>
@@ -13,5 +13,5 @@ export function CardInfo({ title, icon, text}) {
                 </div>
             </div>
         </div>
-    )
-}
+    );
+};

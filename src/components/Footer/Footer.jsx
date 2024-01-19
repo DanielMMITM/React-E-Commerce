@@ -4,7 +4,7 @@ import x from '/src/assets/icons/X.png';
 import lk from '/src/assets/icons/Linkedin.png';
 import ig from '/src/assets/icons/insta.png';
 
-export function Footer() {
+export const Footer = () => {
     return (
         <footer className="footer">
             <div className='footerInfo'>
@@ -36,13 +36,13 @@ export function Footer() {
             </div>
             <div className='socials'>
                 <div className='containerLogos'>
-                    <img src={fb} className='socialLogo'/>
-                    <img src={x} className='socialLogo'/>
-                    <img src={lk} className='socialLogo'/>
-                    <img src={ig} className='socialLogo'/>
+                    <img src={fb} className='socialLogo' />
+                    <img src={x} className='socialLogo' />
+                    <img src={lk} className='socialLogo' />
+                    <img src={ig} className='socialLogo' />
                 </div>
                 <h3 className='copyright'>©Copyrigth All Rights Reserved. 2024. Dev Edgar</h3>
             </div>
         </footer>
-    )
-}
+    );
+};

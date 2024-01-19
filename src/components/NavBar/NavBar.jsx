@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import './NavBar.css'
 
-export function NavBar() {
+export const NavBar = () => {
     return (
         <div className="nav">
             <div className="nav-logo">
@@ -13,7 +13,7 @@ export function NavBar() {
                         <Link className='navOptions' to={"/"}>Home</Link>
                     </li>
                     <li>
-                        <a className='navOptions' href="/#Algorithms">Productos</a>
+                        <a className='navOptions' href="/products">Productos</a>
                     </li>
                     <li>
                         <Link className='navOptions' to={"/login"}>Login</Link>
@@ -21,5 +21,5 @@ export function NavBar() {
                 </ul>
             </div>
         </div>
-    )
-}
+    );
+};
