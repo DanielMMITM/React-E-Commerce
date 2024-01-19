@@ -8,14 +8,14 @@ import './Products.css'
 
 
 export function Products() {
-    const [productsArr, setProductsArr] = useState([]);
+    const [products, setProducts] = useState([]);
 
     useEffect(() => {
         fetch('https://fakestoreapi.com/products')
             .then(res=>res.json())
             .then(data => {
                 console.log(data)
-                setProductsArr(data)
+                setProducts(data)
             })
             .catch(err => console.log(err))
     }, []);
@@ -25,7 +25,7 @@ export function Products() {
             <ScrollRestoration/>
             <NavBar />
             <div className="productsContainer">
-                {productsArr.map((product) => (
+                {products.map((product) => (
                     <CardProduct
                         key = {product.id}
                         title = {product.title}
