@@ -6,20 +6,26 @@ export const CardProduct = ({ currentItems }) => {
         <>
             {currentItems && currentItems.map((product) => (
                 <div className="product-card">
-                    <div className='imgBox'>
-                        <img src={product.image} className="productImg" />
+                    <div className='productCard-up'>
+                        <div className='imgBox'>
+                            <img src={product.image} className="productImg" />
+                        </div>
                     </div>
-                    <div className='contentBox'>
-                        <h1 className='productTitle'>{product.title}</h1>
-                        <span className='price'>${product.price}</span>
-                        <p className='description'>{product.description}</p>
-                    </div>
-                    <div className='btnContainer'>
-                        <Button
-                            route='/'
-                            text="Buy now"
-                        >
-                        </Button>
+                    <div className='productCard-down'>
+                        <div className='contentBox'>
+                            <h1 className='productTitle'>{product.title}</h1>
+                            <p className='description'>{product.description}</p>
+                        </div>
+                        <div className='contentBtn'>
+                            <span className='price'>${product.price}</span>
+                            <div className='btnBuy'>
+                                <Button
+                                    route='/'
+                                    text="Buy now"
+                                >
+                                </Button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             ))}
