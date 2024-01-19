@@ -1,5 +1,5 @@
 import { ScrollRestoration } from 'react-router-dom';
-import { CardInfo } from '/src/components/cardInfo/CardInfo';
+import { CardInfo } from '/src/components/CardInfo/CardInfo';
 import { Button } from '/src/components/Button/Button';
 import './Home.css'
 import categoryImg from '/src/assets/img/clothes.jpg';
