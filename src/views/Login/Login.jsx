@@ -1,9 +1,10 @@
 import './Login.css';
+import {Button} from '/src/components/Button/Button';
 
 export function Login() {
     
     return (
-        <body className='mainContainer'>
+        <div className='mainContainer'>
             <div className="containerForm">
                 <div id='content'>
                     <h1>Welcome </h1>
@@ -18,10 +19,16 @@ export function Login() {
                         </div>
                     </form>
                     <a href="#" id='resetPassword'>Forgot your password?</a>
-                    <button>Login</button>
+                    <div className='btnContainer'>
+                        <Button
+                        route="/"
+                        text= "Login"
+                        >
+                        </Button>
+                    </div>
                 </div>
             </div>
-        </body>
+        </div>
             
         
     )

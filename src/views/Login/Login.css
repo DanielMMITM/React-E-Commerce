@@ -59,21 +59,7 @@ input::placeholder{
     margin-bottom: 1rem;
 }
 
-a{
+#resetPassword{
     color: rgb(35, 35, 252);
     width: 11rem;
-}
-
-button{
-    background: #2B2D42;
-    border-radius: 10px;
-    border: 2px black solid;
-    color: white;
-    width: 8rem;
-    height: 2.5rem;
-    margin-top: 4rem;
-    align-self: center;
-    font-weight: bold;
-    font-size: medium;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
