@@ -1,27 +1,28 @@
 import { Button } from '/src/components/Button/Button'
 import '/src/components/CardProduct/CardProduct.css'
 
-export function CardProduct({title, img, category, description, price, }) {
+export function CardProduct({currentItems}) {
     return (
-        <div className="product-card">
-            <div className='imgBox'>
-                <img src={img} className="productImg" />
+        <>
+            { currentItems && currentItems.map((product) => (
+            <div className="product-card">
+                <div className='imgBox'>
+                    <img src={product.image} className="productImg" />
+                </div>
+                <div className='contentBox'>
+                    <h1 className='productTitle'>{product.title}</h1>
+                    <span className='price'>${product.price}</span>
+                    <p className='description'>{product.description}</p>
+                </div>
+                <div className='btnContainer'>
+                    <Button
+                        route='/'
+                        text="Buy now"
+                    >
+                    </Button>
+                </div>
             </div>
-            <div className='contentBox'>
-                <h1 className='productTitle'>{title}</h1>
-                <span className='price'>${price}</span>
-                <p className='description'>{description}</p>
-            </div>
-            <div className='btnContainer'>
-                <Button
-                    route='/'
-                    text = "Buy now"
-                >
-                </Button>
-            </div>
-            
-        </div>
-        
+            ))} 
+        </>
     )
-    
 }

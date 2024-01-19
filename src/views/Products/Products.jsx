@@ -5,10 +5,20 @@ import { useState } from "react";
 import { useEffect } from "react";
 import { CardProduct } from "/src/components/CardProduct/CardProduct";
 import './Products.css'
+import ReactPaginate from "react-paginate";
 
 
-export function Products() {
+export function Products({ itemsPerPage }) {
     const [products, setProducts] = useState([]);
+    const [itemOffset, setItemOffset] = useState(0);
+    const endOffset = itemOffset + itemsPerPage;
+    const currentItems = products.slice(itemOffset, endOffset);
+    const pageCount = Math.ceil(products.length / itemsPerPage);
+
+    const handlePageClick = (event) => {
+        const newOffset = (event.selected * itemsPerPage) % products.length;
+        setItemOffset(newOffset);
+    };
 
     useEffect(() => {
         fetch('https://fakestoreapi.com/products')
@@ -25,21 +35,18 @@ export function Products() {
             <ScrollRestoration/>
             <NavBar />
             <div className="productsContainer">
-                {products.map((product) => (
-                    <CardProduct
-                        key = {product.id}
-                        title = {product.title}
-                        img = {product.image}
-                        category = {product.category}
-                        description = {product.description}
-                        price = {product.price}
-                    />
-                    )
-                )}
+                <CardProduct currentItems={currentItems} />
             </div>
-            <Footer/>
-            
-            
+            <ReactPaginate
+                breakLabel="..."
+                nextLabel="next >"
+                onPageChange={handlePageClick}
+                pageRangeDisplayed={3}
+                pageCount={pageCount}
+                previousLabel="< previous"
+                renderOnZeroPageCount={null}
+            />
+            <Footer />
         </>
     )
 }
