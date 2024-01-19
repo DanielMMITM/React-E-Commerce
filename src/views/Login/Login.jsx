@@ -1,7 +1,9 @@
+import {
+    Button,
+    NavBar
+} from '/src/components';
 import { ScrollRestoration } from 'react-router-dom';
 import './Login.css';
-import { Button } from '/src/components/Button/Button';
-import {NavBar} from '/src/components/NavBar/NavBar';
 
 export function Login() {
     

@@ -1,13 +1,15 @@
+import {
+    Button,
+    NavBar,
+    Footer,
+    CardInfo
+} from '/src/components';
 import { ScrollRestoration } from 'react-router-dom';
-import { CardInfo } from '/src/components/CardInfo/CardInfo';
-import { Button } from '/src/components/Button/Button';
 import './Home.css'
 import categoryImg from '/src/assets/img/clothes.jpg';
 import car from '/src/assets/icons/car.png';
 import money from '/src/assets/icons/money.png';
 import privacy from '/src/assets/icons/privacy.png';
-import {NavBar} from '/src/components/NavBar/NavBar';
-import { Footer } from "/src/components/Footer/Footer";
 
 export function Home() {
     return (
