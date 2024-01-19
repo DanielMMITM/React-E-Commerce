@@ -1,0 +1,94 @@
+.footer {
+    background: #2B2D42;
+    color: #fff;
+    height: auto;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    margin-top: 6rem;
+}
+
+.footerInfo{
+    display: flex;
+    flex-direction: row;
+    margin: 3rem;
+    height: 50%;
+    border-bottom: 3px solid #f3f313;
+}
+
+.footerLogo{
+    text-align: center;
+    width: 15%;
+    transition: transform 330ms ease-in-out;
+}
+
+.footerContainers{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 90%;
+    justify-content: center;
+    align-items: center;
+}
+
+.containerSupport, 
+.containerServices, 
+.containerExtra, 
+.containerContact{
+    width: 22%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+}
+
+.fooTitle{
+    width: fit-content;
+    margin-top: 10px;
+    transition: transform 330ms ease-in-out;
+    text-shadow: 0 0 1px #f3f313;
+}
+
+.fooTitle:hover{
+    transform: scale(1.1);
+    color: #f3f313;
+    text-decoration: underline;
+}
+
+.footerLogo:hover{
+    transform: scale(1.2);
+    color: #f3f313;
+}
+
+.socials{
+    display: flex;
+    flex-direction: column;
+    height: 50%;
+    margin: 0 3rem;
+}
+
+.containerLogos{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.socialLogo{
+    width: 40px;
+    height: auto;
+    margin-right: 2rem;
+    transition: transform 330ms ease-in-out;
+    box-shadow: 0 0 200px #fff;
+    border-radius: 15px;
+}
+
+.socialLogo:hover{
+    transform: scale(1.5);
+}
+
+.copyright{
+    font-size: 10px;
+    text-align: center;
+}
+
