@@ -5,7 +5,7 @@ export const CardProduct = ({ currentItems }) => {
     return (
         <>
             {currentItems && currentItems.map((product) => (
-                <div className="product-card">
+                <div className="product-card" key={product.id}>
                     <div className='productCard-up'>
                         <div className='imgBox'>
                             <img src={product.image} className="productImg" />
