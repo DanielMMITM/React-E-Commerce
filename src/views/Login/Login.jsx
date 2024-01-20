@@ -1,39 +1,54 @@
 import './Login.css';
 import { useContext, useState, useMemo } from 'react';
 import UserContext from '/src/context/user-context';
-import {useNavigate} from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 export function Login() {
     const navigate = useNavigate();
-    const [username, setUsername] = useState('mor_2314');
-    const [password, setPassword] = useState('83r5^_');
+    const location = useLocation();
+    const [error, setError] = useState('');
+    const [username, setUsername] = useState('johnd');
+    const [password, setPassword] = useState('m38rmF$');
     const [user, setUser] = useContext(UserContext);
 
 
-    const handleSubmit = (e) => {
-        e?.preventDefault();
-        console.log("submit");
-        console.log(username);
-        console.log(password);
-        fetch('https://fakestoreapi.com/auth/login', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-                username: username,
-                password: password
-            })
-        })
-            .then(res => res.json())
-            .then(json => {
-                console.log(json.token);
+    const handleSubmit = async (e) => {
+        try {
+            e?.preventDefault();
+            console.log("location 1: " + location.state);
+            console.log("location 2: " + location.state?.from);
+            const response = await fetch('https://fakestoreapi.com/auth/login', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    username: username,
+                    password: password
+                })
+            });
+            if (response.ok) {
+                const json = await response.json()
                 localStorage.setItem("username", username);
                 localStorage.setItem("token", json.token);
                 setUser(username);
-                navigate('/');
-            })
-            .catch(err => console.log(err));
+                console.log("success");
+                if (location.state) {
+                    navigate("/" + location.state)
+                }
+                else {
+                    navigate("/")
+                }
+            }
+            else {
+                setError("Your username or password doesn't match");
+                setUsername('');
+                setPassword('');
+            }
+        }
+        catch (error) {
+            console.log(error);
+        }
     };
 
     useMemo(() => {
@@ -50,13 +65,15 @@ export function Login() {
                         <form onSubmit={handleSubmit}>
                             <div className='fields'>
                                 <legend>Username</legend>
-                                <input type="text" name='username' id='username' placeholder="Username" onChange={(e) => setUsername(e.target.value)} />
+                                <input type="text" value={username} name='username' placeholder="Username" onChange={(e) => setUsername(e.target.value)} />
                             </div>
                             <div className='fields'>
                                 <legend>Password</legend>
-                                <input type="text" name='password' id='password' placeholder='Password' onChange={(e) => setPassword(e.target.value)} />
+                                <input type="password" value={password}  name='password' placeholder='Password' onChange={(e) => setPassword(e.target.value)} />
                             </div>
-                            <a href="#" id='resetPassword'>Forgot your password?</a>
+                            <div className='errorbox'>
+                                <span href="#" id='errortext'>{ error }</span>
+                            </div>
                             <div className='btnContainer boxbtn'>
                                 <button className='button' type='sumbit'>Login</button>
                             </div>

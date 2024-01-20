@@ -3,6 +3,8 @@ import './NavBar.css'
 import UserContext from '/src/context/user-context';
 import { useContext } from 'react';
 import cart from "/src/assets/icons/cartIcon.png";
+import { useLocation, useNavigate } from 'react-router-dom';
+
 
 export const NavBar = () => {
     const [user, setUser] = useContext(UserContext);
@@ -28,7 +30,7 @@ export const NavBar = () => {
                         <Link className='navOptions' to={"/"}>Home</Link>
                     </li>
                     <li>
-                        <a className='navOptions' href="/products">Productos</a>
+                        <Link className='navOptions' to={'/products'}>Productos</Link>
                     </li>
                     {user !== null ? (
                         <li>

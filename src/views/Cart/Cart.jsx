@@ -2,10 +2,14 @@ import { useContext } from 'react';
 import UserContext from '/src/context/user-context';
 import './Cart.css';
 import CartCard from '/src/components/CartCard/CartCard';
+import { Navigate} from 'react-router-dom';
 
 export const Cart = () => {
     const [user] = useContext(UserContext);
 
+    if (user == null) {
+        return <Navigate state={'cart'} to={"/login"} />;
+    }
 
     return (
         <>

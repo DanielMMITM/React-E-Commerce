@@ -59,11 +59,21 @@ input::placeholder{
     margin-bottom: 1rem;
 }
 
-#resetPassword{
-    color: rgb(35, 35, 252);
-    width: 11rem;
+.errorbox{
+    margin-top: 2rem;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#errortext{
+    text-align: center;
+    color: red;
+    width: 100%;
+
 }
 
 .boxbtn{
-    margin-top: 1rem!important;
+    margin-top: -1rem!important;
 }
