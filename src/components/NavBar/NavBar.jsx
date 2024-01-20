@@ -18,6 +18,11 @@ export const NavBar = () => {
             </div>
             <div className="nav-menu">
                 <ul>
+                    {user !== null ? (
+                        <li>
+                            <span className='navOptions'> <strong>Welcome! { user }</strong></span>
+                        </li>
+                    ) : ''}
                     <li>
                         <Link className='navOptions' to={"/"}>Home</Link>
                     </li>
