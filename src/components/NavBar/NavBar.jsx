@@ -40,7 +40,7 @@ export const NavBar = () => {
                         </li>
                     }
                     <li >
-                        <img src={cart} className='navOptions cartIcon' icon="fa-sharp fa-solid fa-cart-shopping" />
+                        <Link className='navOptions' to={"/cart"}><img src={cart} className='cartIcon' icon="fa-sharp fa-solid fa-cart-shopping" /></Link>
                     </li>
                     
                 </ul>
