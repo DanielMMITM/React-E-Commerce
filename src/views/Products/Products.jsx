@@ -10,35 +10,29 @@ import { useMemo } from "react";
 import './Products.css'
 import ReactPaginate from "react-paginate";
 
+const GET_PRODUCTS = "https://fakestoreapi.com/products";
+
+const CATEGORY_1 = "women's clothing";
+const CATEGORY_2 = "men's clothing";
+const CATEGORY_3 = "jewelery";
+const CATEGORY_4 = "electronics";
+const CLEAR = '';
+
 
 export function Products({ itemsPerPage }) {
-    const [filterCategory, setFilterCategory] = useState("");
+    const [filterValue, setFilterValue] = useState('');
     const [products, setProducts] = useState([]);
     const [itemOffset, setItemOffset] = useState(0);
     const endOffset = itemOffset + itemsPerPage;
-    const currentItems = products.slice(itemOffset, endOffset);
-    const pageCount = Math.ceil(products.length / itemsPerPage);
-
-    function onFilterValueSelected(filterValue) {
-        setFilterCategory(filterValue);
-    }
-
-    let filteredProductsList = products?.filter((product) => {
-        return product.category === filterCategory;     
-    });
 
     const handlePageClick = (event) => {
         const newOffset = (event.selected * itemsPerPage) % products.length;
         setItemOffset(newOffset);
     };
 
-    const handleFilterChange = e => {
-        setFilterValue(e.target.value);
-    };
-
 
     useEffect(() => {
-        fetch('https://fakestoreapi.com/products')
+        fetch(GET_PRODUCTS)
             .then(res=>res.json())
             .then(data => {
                 console.log(data)
@@ -46,6 +40,25 @@ export function Products({ itemsPerPage }) {
             })
             .catch(err => console.log(err))
     }, []);
+
+    
+
+    const filteredProducts = useMemo((cat) => {
+        if (filterValue === CLEAR) {
+            return products;
+        }
+        else {
+            return products.filter(products => products.category.startsWith(filterValue));
+        }
+    }, [products, filterValue]);
+
+    const currentItems = filteredProducts.slice(itemOffset, endOffset);
+    const pageCount = Math.ceil(filteredProducts.length / itemsPerPage);
+
+    const handleFilterChange = (cat) => {
+        setFilterValue(cat);
+        console.log(cat);
+    }
 
     useMemo(() => {
         window.scrollTo({ top: 0 });
@@ -58,21 +71,28 @@ export function Products({ itemsPerPage }) {
             <div className="products-main">
                 <div className="productsBody">
                     <section className="left">
-                        <div className="filterTitleBox">
-                            <h1 className="filterTitle">Filter</h1>
-                        </div>
-                        <div className="filterOptions first">
-                            <div className="option">
-                                <p>Woman's Clothing</p>
+                        <div>
+                            <div className="filterTitleBox">
+                                <h1 className="filterTitle">Filter</h1>
                             </div>
-                            <div className="option">
-                                <p>Men's Clothing</p>
+                            <div className="filterOptions first">
+                                <div className="option" onClick={() => handleFilterChange(CATEGORY_1)}>
+                                    <p>Women's Clothing</p>
+                                </div>
+                                <div className="option" onClick={() => handleFilterChange(CATEGORY_2)}>
+                                    <p>Men's Clothing</p>
+                                </div>
+                                <div className="option" onClick={() => handleFilterChange(CATEGORY_3)}>
+                                    <p>Jewelry</p>
+                                </div>
+                                <div className="option" onClick={() => handleFilterChange(CATEGORY_4)}>
+                                    <>Electronics</>
+                                </div>
                             </div>
-                            <div className="option">
-                                <p>Electronics</p>
-                            </div>
-                            <div className="option">
-                                <p>Jewelry</p>
+                            <div className="reset">
+                                <div className="clearbtn-box">
+                                    <button className= "clearbtn"onClick={() => handleFilterChange(CLEAR)}>Clear filters</button>
+                                </div>
                             </div>
                         </div>
                     </section>

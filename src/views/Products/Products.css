@@ -51,6 +51,23 @@
     box-shadow:0 0 10px#92DCE5;
     font-weight: bold;
 }
+.reset{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.clearbtn{
+    color: white;
+    font-weight: bold;
+    background-color: rgb(223, 29, 29);
+    box-shadow: 0 0 30px#2B2D42;
+    border-radius: 10px;
+    width: 7rem;
+    height: 2rem;
+    cursor: pointer;
+}
 
 .right {
     width: 80%;
