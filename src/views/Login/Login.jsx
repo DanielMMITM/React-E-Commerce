@@ -4,9 +4,10 @@ import {
 import './Login.css';
 import { useContext, useState } from 'react';
 import UserContext from '/src/context/user-context';
-
+import { Navigate, useNavigate} from 'react-router-dom';
 
 export function Login() {
+    const navigate = useNavigate();
     const [username, setUsername] = useState('mor_2314');
     const [password, setPassword] = useState('83r5^_');
     const [user, setUser] = useContext(UserContext);
@@ -35,6 +36,7 @@ export function Login() {
             })
             .catch(err => console.log(err));
         setUser(username);
+        navigate('/');
     };
     
     
