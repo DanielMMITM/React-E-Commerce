@@ -3,7 +3,6 @@ import {
     Footer,
     NavBar
 } from "/src/components";
-import { ScrollRestoration } from 'react-router-dom';
 import { useState } from "react";
 import { useEffect } from "react";
 import { useMemo } from "react";

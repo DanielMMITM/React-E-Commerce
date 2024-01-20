@@ -1,7 +1,6 @@
 import {
     NavBar
 } from '/src/components';
-import { ScrollRestoration, Navigate} from 'react-router-dom';
 import './Login.css';
 import { useState } from 'react';
 
@@ -9,11 +8,6 @@ import { useState } from 'react';
 export function Login() {
     const [username, setUsername] = useState('mor_2314');
     const [password, setPassword] = useState('83r5^_');
-
-    // useEffect(() => {
-    //     if(localStorage.getItem)
-        
-    // }, []);
 
     const handleSubmit = (e) => {
         e?.preventDefault();
@@ -36,7 +30,7 @@ export function Login() {
             localStorage.setItem("username", username);
             localStorage.setItem("token", json.token);
         })
-        .catch(err => console.log(err))
+            .catch(err => console.log(err))
     }
     
     

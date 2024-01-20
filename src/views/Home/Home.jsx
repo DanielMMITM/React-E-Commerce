@@ -4,7 +4,6 @@ import {
     Footer,
     CardInfo
 } from '/src/components';
-import { ScrollRestoration } from 'react-router-dom';
 import './Home.css'
 import categoryImg from '/src/assets/img/clothes.jpg';
 import car from '/src/assets/icons/car.png';
