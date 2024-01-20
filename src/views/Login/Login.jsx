@@ -1,10 +1,7 @@
-import {
-    NavBar
-} from '/src/components';
 import './Login.css';
-import { useContext, useState } from 'react';
+import { useContext, useState, useMemo } from 'react';
 import UserContext from '/src/context/user-context';
-import { Navigate, useNavigate} from 'react-router-dom';
+import {useNavigate} from 'react-router-dom';
 
 export function Login() {
     const navigate = useNavigate();
@@ -38,11 +35,14 @@ export function Login() {
         setUser(username);
         navigate('/');
     };
+
+    useMemo(() => {
+        window.scrollTo({ top: 0 });
+    }, []);
     
     
     return (
         <>
-            <NavBar />
             <div className='mainContainer'>
                 <div className="containerForm">
                     <div id='content'>

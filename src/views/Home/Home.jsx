@@ -1,7 +1,5 @@
 import {
     Button,
-    NavBar,
-    Footer,
     CardInfo
 } from '/src/components';
 import './Home.css'
@@ -9,11 +7,14 @@ import categoryImg from '/src/assets/img/clothes.jpg';
 import car from '/src/assets/icons/car.png';
 import money from '/src/assets/icons/money.png';
 import privacy from '/src/assets/icons/privacy.png';
+import { useMemo } from 'react';
 
 export function Home() {
+    useMemo(() => {
+        window.scrollTo({ top: 0 });
+    }, []);
     return (
         <>
-            <NavBar/>
             <header>
                 <div className='mainAd'>
                     <h1 className='mainTitle'>Get your favorite products at a small cost</h1>
@@ -60,7 +61,6 @@ export function Home() {
                     </div>
                 </div>
             </div>
-            <Footer/>
         </>            
     )
 }

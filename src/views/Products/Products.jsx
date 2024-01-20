@@ -1,7 +1,5 @@
 import {
-    CardProduct,
-    Footer,
-    NavBar
+    CardProduct
 } from "/src/components";
 import { useState } from "react";
 import { useEffect } from "react";
@@ -65,7 +63,6 @@ export function Products({ itemsPerPage }) {
 
     return (
         <>
-            <NavBar />
             <div className="products-main">
                 <div className="productsBody">
                     <section className="left">
@@ -118,7 +115,6 @@ export function Products({ itemsPerPage }) {
                     />
                 </div>
             </div>    
-            <Footer />
         </>
     )
 }
