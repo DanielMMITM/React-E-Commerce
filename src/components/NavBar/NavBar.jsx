@@ -1,7 +1,10 @@
 import { Link } from 'react-router-dom'
 import './NavBar.css'
+import UserContext from '/src/context/user-context';
+import { useContext } from 'react';
 
 export const NavBar = () => {
+    const user = useContext(UserContext);
     return (
         <div className="nav">
             <div className="nav-logo">
@@ -15,9 +18,16 @@ export const NavBar = () => {
                     <li>
                         <a className='navOptions' href="/products">Productos</a>
                     </li>
-                    <li>
-                        <Link className='navOptions' to={"/login"}>Login</Link>
-                    </li>
+                    {user !== null ? (
+                        <li>
+                            <span className='navOptions'>Logout</span>
+                        </li>
+                    ) : 
+                        <li>
+                            <Link className='navOptions' to={"/login"}>Login</Link>
+                        </li>
+                    }
+                    
                 </ul>
             </div>
         </div>

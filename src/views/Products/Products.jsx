@@ -66,7 +66,6 @@ export function Products({ itemsPerPage }) {
 
     return (
         <>
-            <ScrollRestoration/>
             <NavBar />
             <div className="products-main">
                 <div className="productsBody">

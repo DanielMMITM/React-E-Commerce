@@ -63,3 +63,7 @@ input::placeholder{
     color: rgb(35, 35, 252);
     width: 11rem;
 }
+
+.boxbtn{
+    margin-top: 1rem!important;
+}

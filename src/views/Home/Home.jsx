@@ -14,7 +14,6 @@ import privacy from '/src/assets/icons/privacy.png';
 export function Home() {
     return (
         <>
-            <ScrollRestoration/>
             <NavBar/>
             <header>
                 <div className='mainAd'>
