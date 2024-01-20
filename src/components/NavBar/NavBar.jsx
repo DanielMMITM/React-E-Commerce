@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import './NavBar.css'
 import UserContext from '/src/context/user-context';
 import { useContext } from 'react';
+import cart from "/src/assets/icons/cartIcon.png";
 
 export const NavBar = () => {
     const [user, setUser] = useContext(UserContext);
@@ -38,6 +39,9 @@ export const NavBar = () => {
                             <Link className='navOptions' to={"/login"}>Login</Link>
                         </li>
                     }
+                    <li >
+                        <img src={cart} className='navOptions cartIcon' icon="fa-sharp fa-solid fa-cart-shopping" />
+                    </li>
                     
                 </ul>
             </div>
