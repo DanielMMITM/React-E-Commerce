@@ -30,10 +30,10 @@ export function Login() {
                 console.log(json.token);
                 localStorage.setItem("username", username);
                 localStorage.setItem("token", json.token);
+                setUser(username);
+                navigate('/');
             })
             .catch(err => console.log(err));
-        setUser(username);
-        navigate('/');
     };
 
     useMemo(() => {
