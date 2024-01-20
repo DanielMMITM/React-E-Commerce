@@ -1,0 +1,44 @@
+.cartCard-main{
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: row;
+    border-bottom: 2px solid gray;
+}
+
+.cartCard-left{
+    width: 30%;
+    margin-bottom: 1rem;
+}
+
+.cartImg{
+    width: 75%;
+    height: 100%;
+}
+
+.cartCard-right{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.cartContainer-info{
+    width: 80%;
+}
+
+.cartProduct-info{
+    display: flex;
+    flex-direction: column;
+}
+
+.info-cart{
+    margin-bottom: 1.5rem;
+}
+
+.cartContainer-price{
+    text-align: end;
+    width: 20%;
+}
+
+.cartProduct-total{
+    margin-right: 3rem;
+}
