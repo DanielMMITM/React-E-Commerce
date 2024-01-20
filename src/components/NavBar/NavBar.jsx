@@ -4,7 +4,13 @@ import UserContext from '/src/context/user-context';
 import { useContext } from 'react';
 
 export const NavBar = () => {
-    const user = useContext(UserContext);
+    const [user, setUser] = useContext(UserContext);
+
+    const logout = () => {
+        setUser(null);
+        localStorage.clear();
+    };
+    
     return (
         <div className="nav">
             <div className="nav-logo">
@@ -20,7 +26,7 @@ export const NavBar = () => {
                     </li>
                     {user !== null ? (
                         <li>
-                            <span className='navOptions'>Logout</span>
+                            <span className='navOptions' onClick={logout}>Logout</span>
                         </li>
                     ) : 
                         <li>
