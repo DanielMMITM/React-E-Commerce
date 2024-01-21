@@ -20,24 +20,27 @@ export function Products({ itemsPerPage }) {
     const [filterValue, setFilterValue] = useState('');
     const [products, setProducts] = useState([]);
     const [itemOffset, setItemOffset] = useState(0);
-    const endOffset = itemOffset + itemsPerPage;
+    let endOffset = itemOffset + itemsPerPage;
 
     const handlePageClick = (event) => {
         const newOffset = (event.selected * itemsPerPage) % products.length;
         setItemOffset(newOffset);
+        console.log('currentItems: ' + currentItems);
+        console.log('newOffset: ' + newOffset);
     };
 
     useEffect(() => {
         fetch(GET_PRODUCTS)
             .then(res=>res.json())
             .then(data => {
-                console.log(data)
                 setProducts(data)
             })
             .catch(err => console.log(err))
     }, []);
 
-    const filteredProducts = useMemo((cat) => {
+    const filteredProducts = useMemo(() => {
+        setItemOffset(0);
+        endOffset = itemOffset + itemsPerPage;
         if (filterValue === CLEAR) {
             return products;
         }
@@ -51,7 +54,6 @@ export function Products({ itemsPerPage }) {
 
     const handleFilterChange = (cat) => {
         setFilterValue(cat);
-        console.log(cat);
     }
 
     useMemo(() => {
