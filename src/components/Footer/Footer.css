@@ -47,13 +47,12 @@
     width: fit-content;
     margin-top: 10px;
     transition: transform 330ms ease-in-out;
-    text-shadow: 0 0 1px #f3f313;
+    cursor: pointer;
 }
 
 .fooTitle:hover{
     transform: scale(1.1);
     color: #f3f313;
-    text-decoration: underline;
 }
 
 .footerLogo:hover{
@@ -81,6 +80,7 @@
     transition: transform 330ms ease-in-out;
     box-shadow: 0 0 200px #fff;
     border-radius: 15px;
+    cursor: pointer;
 }
 
 .socialLogo:hover{

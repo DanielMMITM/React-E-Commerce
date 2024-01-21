@@ -13,4 +13,10 @@
     font-weight: bold;
     font-size: medium;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    cursor: pointer;
+    transition: 100ms ease-in-out;
+}
+
+.button:hover{
+    transform: scale(1.1);
 }

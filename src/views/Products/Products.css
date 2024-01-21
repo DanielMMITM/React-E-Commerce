@@ -8,14 +8,14 @@
     height: auto;
     width: 99.8%;
     flex-direction: row;
+    margin-left: 1rem;
 }
 
 .left{
-    border: 2px green solid;
     width: 20%;
     margin: 1.5rem 0 1.5rem 1rem;
     border-radius: 10px;
-    background: linear-gradient(310deg, #F8F7F9 70%, #92DCE5 20%);;
+    background: linear-gradient(310deg, #F8F7F9 70%, #92DCE5 20%);
     box-shadow: inset 0 0 30px #2B2D42;
 }
 
@@ -48,7 +48,6 @@
     color: white;
     background-color: #2B2D42;
     cursor: pointer;
-    box-shadow:0 0 10px#92DCE5;
     font-weight: bold;
 }
 .reset{
@@ -62,16 +61,22 @@
     color: white;
     font-weight: bold;
     background-color: rgb(223, 29, 29);
-    box-shadow: 0 0 30px#2B2D42;
+    box-shadow: 0 0 5px#2B2D42;
     border-radius: 10px;
     width: 7rem;
     height: 2rem;
     cursor: pointer;
+    transition: 100ms linear;
+}
+
+.clearbtn:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 10px#2B2D42;
 }
 
 .right {
     width: 80%;
-    margin: 1.5rem 2rem
+    margin: 1.5rem 1rem
 }
 .productsContainer{
     padding: 2rem;
@@ -85,7 +90,7 @@
 .paginationContainer{
     justify-content: center;
     align-items: center;
-    margin: -1rem 1rem -4rem;
+    margin: -1rem 2rem -4rem;
     width: auto;
 }
 
@@ -100,6 +105,12 @@
     height: 40px;
     justify-content: center;
     width: 40px;
+    transition: 100ms linear;
+}
+
+.item:hover{
+    transform: scale(1.1);
+    box-shadow:0 0 10px #2B2D42;
 }
 
 .disabled-page {
@@ -124,6 +135,12 @@
     right: 0;
     width: 150px;
     cursor: pointer;
+    transition: 100ms linear;
+}
+
+.next:hover, .previous:hover {
+    transform: scale(0.97);
+    box-shadow:  0 0 10px #2B2D42;
 }
 
 .pagination {
@@ -135,7 +152,8 @@
     justify-content: center;
     list-style-type: none;
     position: relative;
-    width: 89.5rem;
+    width: 85rem;
+    box-shadow: 0 0 10px#2B2D42;
 }
 
 .pagination-page {
@@ -153,4 +171,5 @@
     position: absolute;
     width: 150px;
     cursor: pointer;
+    transition: 100ms linear;
 }
