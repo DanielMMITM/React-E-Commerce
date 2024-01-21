@@ -33,7 +33,7 @@ export const NavBar = () => {
                     </li>
                     {user !== null ? (
                         <li>
-                            <span className='navOptions' onClick={logout}>Logout</span>
+                            <Link className='navOptions' onClick={logout} to={"/"}>Logout</Link>
                         </li>
                     ) : 
                         <li>
