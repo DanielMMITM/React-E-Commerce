@@ -1,4 +1,5 @@
 import { useContext, useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import UserContext from '/src/context/user-context';
 import './Cart.css';
 import CartCard from '/src/components/CartCard/CartCard';
@@ -17,6 +18,18 @@ export const Cart = () => {
     if (user == null) {
         return <Navigate state={'cart'} to={"/login"} />;
     }
+
+    const handleTotal = () => {
+        console.log("si");
+        let totalPrice = 0;
+        cart.products?.map((productCart) => {
+            products?.map((product) => {
+                console.log(totalPrice);
+                totalPrice = totalPrice + (product.price * productCart.quantity);
+            });
+        });
+        setTotal(totalPrice);
+    };
 
     const fetchCart = async () => {
         try {
@@ -40,7 +53,12 @@ export const Cart = () => {
 
     useEffect(() => {
         fetchCart();
+        handleTotal();
     }, []);
+
+    useEffect(() => {
+        handleTotal();
+    }, [cart]);
 
     return (
         <div className='cartbody-page'>
@@ -77,6 +95,11 @@ export const Cart = () => {
                                 <span>Sales Tax</span>
                                 <span>TBD</span>
                             </div>
+                            <div className='linked-payment totalbox'>
+                                <span className='carttotal'>Estimated Total</span>
+                                <span className='totalprice'>${total}</span>
+                            </div>
+                            <Link to={"/"}><button type='button' className='paybutton'>Checkout</button></Link>
                         </div>
                     </div>
                 </div>

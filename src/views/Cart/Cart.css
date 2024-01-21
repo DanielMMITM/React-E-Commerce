@@ -81,4 +81,38 @@
     margin: 1rem 0;
 }
 
+.totalbox{
+    border-bottom: 6px solid #000;
+    border-top: 6px solid #000;
+}
+
+.carttotal{
+    margin: 1rem 0;
+    font-size: large;
+    font-weight: bold;
+}
+
+.totalprice{
+    margin: 1rem 0;
+    font-size: large;
+}
+.paybutton{
+    margin-top: 1rem;
+    background-color: #000;
+    color: #fff;
+    font-size: large;
+    font-weight: bold;
+    box-shadow:0 0 5px#000;
+    transition: 100ms ease-out;
+    cursor: pointer;
+    width:100%;
+}
+
+.paybutton:hover{
+    transform: scale(1.05);
+    background-color: #fff;
+    box-shadow: 0 0 30px#000;
+    color: #000;
+}
+
 
