@@ -1,30 +1,31 @@
 import './CartCard.css';
-import imgproduct from '/src/assets/img/ad.jpg';
 
-export const CartCard = () => {
+export const CartCard = ({product, productQuantity}) => {
 
     return (
         <>
-            <div className='cartCard-main'>
-                <div className='cartCard-left'>
-                    <img className='cartImg' src={imgproduct} alt="" />
-                </div>
-                <div className='cartCard-right'>
-                    <div className='cartContainer-info'>
-                        <div className='cartProduct-info'>
-                            <h2>Title</h2>
-                            <span className='info-cart'>Category</span>
-                            <span className='info-cart'>Quantity</span>
-                            <span className='info-cart'>SomeColor</span>
+            {product.map((product, index) => (
+                <div className='cartCard-main' key={product.id}>
+                    <div className='cartCard-left'>
+                        <img className='cartImg' src={product.image} alt="" />
+                    </div>
+                    <div className='cartCard-right'>
+                        <div className='cartContainer-info'>
+                            <div className='cartProduct-info'>
+                                <h2>{product.title}</h2>
+                                <span className='info-cart'>Category: {product.category}</span>
+                                <span className='info-cart'>Quantity: {productQuantity[index].quantity}</span>
+                                <span className='info-cart'>SomeColor</span>
+                            </div>
+                        </div>
+                        <div className='cartContainer-price'>
+                            <div className='cartProduct-total'>
+                                <h2>${product.price}</h2>
+                            </div>
                         </div>
                     </div>
-                    <div className='cartContainer-price'>
-                        <div className='cartProduct-total'>
-                            <h2>Price</h2>
-                        </div>
-                    </div>
                 </div>
-            </div>
+            ))}
         
         </>
     );

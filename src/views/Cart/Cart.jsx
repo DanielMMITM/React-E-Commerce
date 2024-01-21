@@ -1,29 +1,62 @@
-import { useContext } from 'react';
+import { useContext, useState, useEffect } from 'react';
 import UserContext from '/src/context/user-context';
 import './Cart.css';
 import CartCard from '/src/components/CartCard/CartCard';
-import { Navigate} from 'react-router-dom';
+import { Navigate } from 'react-router-dom';
+
+const GET_CART= "https://fakestoreapi.com/carts/6";
+const GET_PRODUCT= "https://fakestoreapi.com/products/";
+
 
 export const Cart = () => {
     const [user] = useContext(UserContext);
+    const [cart, setCart] = useState('');
+    const [products, setProducts] = useState([]);
+    const [total, setTotal] = useState(0);
 
     if (user == null) {
         return <Navigate state={'cart'} to={"/login"} />;
     }
 
+    const fetchCart = async () => {
+        try {
+            let cartResponse = await fetch(GET_CART);
+            if (cartResponse.status === 200) {
+                let cartResponseJson = await cartResponse.json();
+                let productsList = await Promise.all(
+                    cartResponseJson.products.map(async product => {
+                        let productResponse = await fetch(GET_PRODUCT + product.productId);
+                        return productResponse.json();
+                    })
+                );
+                setCart(cartResponseJson);
+                setProducts(productsList);
+            }
+        }
+        catch (error) {
+            console.log(error);
+        }
+    }
+
+    useEffect(() => {
+        fetchCart();
+    }, []);
+
     return (
-        <>
+        <div className='cartbody-page'>
             <div className="cartbody">
                 <div className="cartBody-left">
                     <div className="cartBox">
                         <div className="cartBox-up">
-                            <h2>Your shopping cart {user}</h2>
+                            <h2 className='cart-text-title'>Your shopping cart {user}</h2>
+                        </div>
+                        <div className='cart-separator'>
+                            <h3 className='cart-text-title sub-title'>PRODUCT</h3>
+                            <h3 className='cart-text-price sub-title'>PRICE</h3>
                         </div>
                         <div className="cartBox-down">
-                            <CartCard />
-                            <CartCard />
-                            <CartCard />
-                            <CartCard />
+                            <CartCard product={products} productQuantity={cart.products} />
+                            <span></span>
                         </div>
                     </div>  
                 </div>
@@ -49,7 +82,7 @@ export const Cart = () => {
                 </div>
                       
             </div>
-        </>
+        </div>
     );
     
 };

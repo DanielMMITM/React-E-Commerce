@@ -1,12 +1,13 @@
 .cartbody{
     display: flex;
     flex-direction: row;
+    width: 99.8%;
 }
 
 .cartBox{
     margin-top: 2rem;
     height: auto;
-    width: 70rem;
+    width: 100%;
     display: grid;
     justify-content: center;
 }
@@ -21,13 +22,32 @@
     flex-direction: column;
 }
 
+.cart-text-title{
+    margin-left: 1rem;
+}
+.cart-text-price {
+    margin-right: 2.8rem;
+}
+.sub-title{
+    color: #000;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    opacity: 0.7;
+}
+
+.cart-separator{
+    border-bottom: #c2c2c5 4px solid;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
 .cartBox-down {
-    height: 80%;
+    width: 70rem;
 }
 
 .cartBody-right{
     background-color: #efeff0;
-    width: 30rem;
+    width: 100%;
     box-shadow:0 0 5px #666668;
 }
 
