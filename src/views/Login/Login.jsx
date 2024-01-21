@@ -15,8 +15,6 @@ export function Login() {
     const handleSubmit = async (e) => {
         try {
             e?.preventDefault();
-            console.log("location 1: " + location.state);
-            console.log("location 2: " + location.state?.from);
             const response = await fetch('https://fakestoreapi.com/auth/login', {
                 method: 'POST',
                 headers: {
@@ -32,7 +30,6 @@ export function Login() {
                 localStorage.setItem("username", username);
                 localStorage.setItem("token", json.token);
                 setUser(username);
-                console.log("success");
                 if (location.state) {
                     navigate("/" + location.state)
                 }
