@@ -6,7 +6,6 @@
 .productsBody{
     display: flex;
     height: auto;
-    width: 99.8%;
     flex-direction: row;
     margin-left: 1rem;
 }
