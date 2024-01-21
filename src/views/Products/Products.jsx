@@ -17,7 +17,7 @@ const CLEAR = '';
 
 
 export function Products({ itemsPerPage }) {
-    const [filterValue, setFilterValue] = useState('');
+    const [filterValue, setFilterValue] = useState(CLEAR);
     const [products, setProducts] = useState([]);
     const [itemOffset, setItemOffset] = useState(0);
     let endOffset = itemOffset + itemsPerPage;
@@ -25,8 +25,6 @@ export function Products({ itemsPerPage }) {
     const handlePageClick = (event) => {
         const newOffset = (event.selected * itemsPerPage) % products.length;
         setItemOffset(newOffset);
-        console.log('currentItems: ' + currentItems);
-        console.log('newOffset: ' + newOffset);
     };
 
     useEffect(() => {
