@@ -15,3 +15,5 @@ export const CardInfo = ({ title, icon, text }) => {
         </div>
     );
 };
+
+export default CardInfo;

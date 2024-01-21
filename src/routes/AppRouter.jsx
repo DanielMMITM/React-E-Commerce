@@ -19,7 +19,6 @@ const AppRouter = () => {
                     <Route path="/Cart" element={<Cart />}></Route>
                 </Routes>
                 <Footer/>
-
             </BrowserRouter>
         </UserProvider>
     );

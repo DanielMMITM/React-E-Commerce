@@ -27,9 +27,10 @@ export const CardProduct = ({ currentItems }) => {
                             </Button>
                         </div>
                     </div>
-                    
                 </div>
             ))}
         </>
     );
 };
+
+export default CardProduct;

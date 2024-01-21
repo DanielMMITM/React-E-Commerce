@@ -20,11 +20,9 @@ export const Cart = () => {
     }
 
     const handleTotal = () => {
-        console.log("si");
         let totalPrice = 0;
         cart.products?.map((productCart) => {
             products?.map((product) => {
-                console.log(totalPrice);
                 totalPrice = totalPrice + (product.price * productCart.quantity);
             });
         });
@@ -103,11 +101,9 @@ export const Cart = () => {
                         </div>
                     </div>
                 </div>
-                      
             </div>
         </div>
     );
-    
 };
 
 export default Cart;

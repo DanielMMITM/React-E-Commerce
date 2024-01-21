@@ -23,19 +23,19 @@ export function Home() {
                     <CardInfo
                         title="Fast delivery service"
                         icon={car}
-                        text = "Best service in the world. You won't regret it"
+                        text="Best service in the world. You won't regret it"
                     >
                     </CardInfo>
                     <CardInfo
                         title="Low cost products"
                         icon={money}
-                        text = "We save your money by offering you quality products"
+                        text="We save your money by offering you quality products"
                     >
                     </CardInfo>
                     <CardInfo
                         title="Data privacy"
                         icon={privacy}
-                        text = "We protect all your data and your payments"
+                        text="We protect all your data and your payments"
                     >
                     </CardInfo>
                 </div>
@@ -44,7 +44,7 @@ export function Home() {
                 <h1>Check our merchandising</h1>
                 <div className='content'>
                     <div className='containerLeft'>
-                        <img src={categoryImg} className="exImg"/>
+                        <img src={categoryImg} className="exImg" />
                     </div>
                     <div className='containerRight'>
                         <h2>Get our newest clothes!</h2>
@@ -52,7 +52,7 @@ export function Home() {
                         <div className='btnContainer'>
                             <Button
                                 route="/login"
-                                text = "Check out"
+                                text="Check out"
                             >
                             </Button>
                         </div>
@@ -61,8 +61,8 @@ export function Home() {
                     </div>
                 </div>
             </div>
-        </>            
-    )
-}
+        </>
+    );
+};
 
 export default Home;

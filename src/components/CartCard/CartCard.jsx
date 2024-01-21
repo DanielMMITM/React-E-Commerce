@@ -1,7 +1,6 @@
 import './CartCard.css';
 
 export const CartCard = ({product, productQuantity}) => {
-
     return (
         <>
             {product.map((product, index) => (
@@ -26,10 +25,8 @@ export const CartCard = ({product, productQuantity}) => {
                     </div>
                 </div>
             ))}
-        
         </>
     );
-
 };
 
 export default CartCard;

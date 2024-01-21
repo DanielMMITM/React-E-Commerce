@@ -8,3 +8,5 @@ export const Button = ({ route, text }) => {
         </div>
     );
 };
+
+export default Button;

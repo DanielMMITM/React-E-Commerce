@@ -11,7 +11,6 @@ export function Login() {
     const [password, setPassword] = useState('m38rmF$');
     const [user, setUser] = useContext(UserContext);
 
-
     const handleSubmit = async (e) => {
         try {
             e?.preventDefault();
@@ -51,7 +50,6 @@ export function Login() {
     useMemo(() => {
         window.scrollTo({ top: 0 });
     }, []);
-    
     
     return (
         <>

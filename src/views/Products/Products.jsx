@@ -27,7 +27,6 @@ export function Products({ itemsPerPage }) {
         setItemOffset(newOffset);
     };
 
-
     useEffect(() => {
         fetch(GET_PRODUCTS)
             .then(res=>res.json())
@@ -37,8 +36,6 @@ export function Products({ itemsPerPage }) {
             })
             .catch(err => console.log(err))
     }, []);
-
-    
 
     const filteredProducts = useMemo((cat) => {
         if (filterValue === CLEAR) {
@@ -86,35 +83,37 @@ export function Products({ itemsPerPage }) {
                             </div>
                             <div className="reset">
                                 <div className="clearbtn-box">
-                                    <button className= "clearbtn"onClick={() => handleFilterChange(CLEAR)}>Clear filters</button>
+                                    <button className="clearbtn" onClick={() => handleFilterChange(CLEAR)}>Clear filters</button>
                                 </div>
                             </div>
                         </div>
                     </section>
                     <section className="right">
                         <div className="productsContainer">
-                        <CardProduct currentItems={currentItems} />
+                            <CardProduct currentItems={currentItems} />
                         </div>
                     </section>
                 </div>
                 <div className="paginationContainer">
                     <ReactPaginate
-                    activeClassName={'item active '}
-                    breakClassName={'item'}
-                    breakLabel={'...'}
-                    containerClassName={'pagination'}
-                    disabledClassName={'disabled-page'}
-                    marginPagesDisplayed={2}
-                    pageClassName={'item pagination-page '}
-                    nextLabel="Next >>"
-                    onPageChange={handlePageClick}
-                    pageRangeDisplayed={3}
-                    pageCount={pageCount}
-                    previousLabel="<< Previous"
-                    renderOnZeroPageCount={null}
+                        activeClassName={'item active '}
+                        breakClassName={'item'}
+                        breakLabel={'...'}
+                        containerClassName={'pagination'}
+                        disabledClassName={'disabled-page'}
+                        marginPagesDisplayed={2}
+                        pageClassName={'item pagination-page '}
+                        nextLabel="Next >>"
+                        onPageChange={handlePageClick}
+                        pageRangeDisplayed={3}
+                        pageCount={pageCount}
+                        previousLabel="<< Previous"
+                        renderOnZeroPageCount={null}
                     />
                 </div>
-            </div>    
+            </div>
         </>
-    )
-}
+    );
+};
+
+export default Products;

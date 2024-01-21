@@ -3,7 +3,6 @@ import './NavBar.css'
 import UserContext from '/src/context/user-context';
 import { useContext } from 'react';
 import cart from "/src/assets/icons/cartIcon.png";
-import { useLocation, useNavigate } from 'react-router-dom';
 
 
 export const NavBar = () => {
@@ -50,3 +49,5 @@ export const NavBar = () => {
         </div>
     );
 };
+
+export default NavBar;
