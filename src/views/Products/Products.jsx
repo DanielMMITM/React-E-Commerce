@@ -21,19 +21,21 @@ export function Products({ itemsPerPage }) {
     const [products, setProducts] = useState([]);
     const [itemOffset, setItemOffset] = useState(0);
     let endOffset = itemOffset + itemsPerPage;
+    const [checkFirstLoad, setCheckFirstLoad] = useState(true);
 
     const handlePageClick = (event) => {
+        setCheckFirstLoad(false);
         const newOffset = (event.selected * itemsPerPage) % products.length;
         setItemOffset(newOffset);
     };
 
     useEffect(() => {
         fetch(GET_PRODUCTS)
-            .then(res=>res.json())
+            .then(res => res.json())
             .then(data => {
                 setProducts(data)
             })
-            .catch(err => console.log(err))
+            .catch(err => console.log(err));
     }, []);
 
     const filteredProducts = useMemo(() => {
@@ -51,6 +53,12 @@ export function Products({ itemsPerPage }) {
     const pageCount = Math.ceil(filteredProducts.length / itemsPerPage);
 
     const handleFilterChange = (cat) => {
+        if (filterValue !== cat) {
+            setCheckFirstLoad(true);
+        }
+        else {
+            setCheckFirstLoad(false);
+        }
         setFilterValue(cat);
     }
 
@@ -96,6 +104,7 @@ export function Products({ itemsPerPage }) {
                 </div>
                 <div className="paginationContainer">
                     <ReactPaginate
+                        forcePage={checkFirstLoad ? 0 : ''}
                         activeClassName={'item active '}
                         breakClassName={'item'}
                         breakLabel={'...'}
@@ -109,6 +118,7 @@ export function Products({ itemsPerPage }) {
                         pageCount={pageCount}
                         previousLabel="<< Previous"
                         renderOnZeroPageCount={null}
+                        
                     />
                 </div>
             </div>
