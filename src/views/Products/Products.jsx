@@ -22,11 +22,13 @@ export function Products({ itemsPerPage }) {
     const [itemOffset, setItemOffset] = useState(0);
     let endOffset = itemOffset + itemsPerPage;
     const [checkFirstLoad, setCheckFirstLoad] = useState(true);
+    const [currentPage, setCurrentPage] = useState(0);
 
     const handlePageClick = (event) => {
         setCheckFirstLoad(false);
         const newOffset = (event.selected * itemsPerPage) % products.length;
         setItemOffset(newOffset);
+        setCurrentPage(event.selected);
     };
 
     useEffect(() => {
@@ -54,10 +56,12 @@ export function Products({ itemsPerPage }) {
 
     const handleFilterChange = (cat) => {
         if (filterValue !== cat) {
+            setCurrentPage(0);
             setCheckFirstLoad(true);
         }
         else {
             setCheckFirstLoad(false);
+            setCurrentPage(currentPage + 1);
         }
         setFilterValue(cat);
     }
@@ -104,7 +108,7 @@ export function Products({ itemsPerPage }) {
                 </div>
                 <div className="paginationContainer">
                     <ReactPaginate
-                        forcePage={checkFirstLoad ? 0 : ''}
+                        forcePage={checkFirstLoad && currentPage === 0 ? 0 : currentPage}
                         activeClassName={'item active '}
                         breakClassName={'item'}
                         breakLabel={'...'}
@@ -118,7 +122,6 @@ export function Products({ itemsPerPage }) {
                         pageCount={pageCount}
                         previousLabel="<< Previous"
                         renderOnZeroPageCount={null}
-                        
                     />
                 </div>
             </div>
