@@ -5,26 +5,20 @@ export const CardProduct = ({ currentItems }) => {
     return (
         <>
             {currentItems && currentItems.map((product) => (
-                <div className="product-card" key={product.id}>
-                    <div className='productCard-up'>
-                        <div className='imgBox'>
-                            <img src={product.image} className="productImg" />
-                        </div>
-                    </div>
-                    <div className='productCard-down'>
-                        <div className='contentBox'>
-                                <h1 className='productTitle'>{product.title}</h1>
-                                <p className='description'>{product.description}</p>
-                        </div>
-                    </div>
-                    <div className='contentBtn'>
-                        <span className='price'>${product.price}</span>
-                        <div className='btnBuy'>
-                            <Button
-                                route='/'
-                                text="Buy now"
-                            >
-                            </Button>
+                <div className="card col-lg-3 col-md-5 col-sm-12 flex-grow-1"  key={product.id}>
+                    <img src={product.image} className="card-img-top img-fluid w-50 mx-auto d-block" alt="..."/>
+                    <div className="card-body">
+                        <h5 className="card-title">{product.title}</h5>
+                        <p className="card-text">{product.description}</p>
+                        <div className='contentBtn'>
+                            <span className='price'>${product.price}</span>
+                            <div className='btnBuy'>
+                                <Button
+                                    route='/'
+                                    text="Add to cart"
+                                >
+                                </Button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -32,5 +26,7 @@ export const CardProduct = ({ currentItems }) => {
         </>
     );
 };
+
+
 
 export default CardProduct;

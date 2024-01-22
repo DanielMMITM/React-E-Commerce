@@ -7,8 +7,6 @@ import { useMemo } from "react";
 import './Products.css'
 import ReactPaginate from "react-paginate";
 
-const GET_PRODUCTS = "https://fakestoreapi.com/products";
-
 const CATEGORY_1 = "women's clothing";
 const CATEGORY_2 = "men's clothing";
 const CATEGORY_3 = "jewelery";
@@ -32,7 +30,7 @@ export function Products({ itemsPerPage }) {
     };
 
     useEffect(() => {
-        fetch(GET_PRODUCTS)
+        fetch("https://fakestoreapi.com/" + 'products')
             .then(res => res.json())
             .then(data => {
                 setProducts(data)
@@ -74,7 +72,7 @@ export function Products({ itemsPerPage }) {
         <>
             <div className="products-main">
                 <div className="productsBody">
-                    <section className="left">
+                    <aside className="left">
                         <div>
                             <div className="filterTitleBox">
                                 <h1 className="filterTitle">Filter</h1>
@@ -99,10 +97,15 @@ export function Products({ itemsPerPage }) {
                                 </div>
                             </div>
                         </div>
-                    </section>
+                    </aside>
                     <section className="right">
-                        <div className="productsContainer">
+                        {/* <div className="productsContainer">
                             <CardProduct currentItems={currentItems} />
+                        </div> */}
+                        <div className="container text-center ">
+                            <div className="d-flex flex-wrap justify-content-evenly gap-3">
+                                <CardProduct currentItems={currentItems} />
+                            </div>
                         </div>
                     </section>
                 </div>
