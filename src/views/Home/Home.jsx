@@ -11,9 +11,9 @@ import { useMemo } from 'react';
 import mainImage from '/src/assets/img/adxbig3.jpg';
 
 export function Home() {
-    // useMemo(() => {
-    //     window.scrollTo({ top: 0 });
-    // }, []);
+    useMemo(() => {
+        window.scrollTo({ top: 0 });
+    }, []);
     return (
         <>
             <header>
