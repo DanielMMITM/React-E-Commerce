@@ -5,11 +5,14 @@ import './Cart.css';
 import CartCard from '/src/components/CartCard/CartCard';
 import { Navigate } from 'react-router-dom';
 
-const GET_CART= "https://fakestoreapi.com/carts/6";
+const GET_CART= "https://fakestoreapi.com/carts/";
 const GET_PRODUCT= "https://fakestoreapi.com/products/";
 
 
 export const Cart = () => {
+
+    let randomCart = Math.floor(Math.random() * 6) + 1;
+
     const [user] = useContext(UserContext);
     const [cart, setCart] = useState('');
     const [products, setProducts] = useState([]);
@@ -31,7 +34,7 @@ export const Cart = () => {
 
     const fetchCart = async () => {
         try {
-            let cartResponse = await fetch(GET_CART);
+            let cartResponse = await fetch(GET_CART + randomCart);
             if (cartResponse.status === 200) {
                 let cartResponseJson = await cartResponse.json();
                 let productsList = await Promise.all(

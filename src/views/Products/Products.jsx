@@ -7,6 +7,7 @@ import { useMemo } from "react";
 import './Products.css'
 import ReactPaginate from "react-paginate";
 
+const GET_PRODUCTS = "https://fakestoreapi.com/products";
 const CLEAR = '';
 
 const CATEGORIES = [
@@ -33,7 +34,7 @@ export function Products({ itemsPerPage }) {
     };
 
     useEffect(() => {
-        fetch("https://fakestoreapi.com/" + 'products')
+        fetch(GET_PRODUCTS)
             .then(res => res.json())
             .then(data => {
                 setProducts(data)
