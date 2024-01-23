@@ -1,6 +1,4 @@
 .nav {
-    display: flex;
-    flex-direction: row;
     justify-content: space-between;
     color: #F8F7F9;
     background: #2B2D42;
@@ -9,7 +7,6 @@
 .nav-logo {
     font-size: 2rem;
     font-weight: bold;
-    padding: 1.2rem;
     margin-left: 3rem;
 }
 
@@ -20,8 +17,6 @@
 
 .nav-menu ul {
     list-style: none;
-    display: flex;
-    justify-content: end;
     flex-direction: row;
 }
 
@@ -43,7 +38,6 @@
     color: #F8F7F9;
 }
 
-.cartIcon{
-    width: 30px;
-    height: auto;
+.btn-white{
+    background-color: white !important;;
 }

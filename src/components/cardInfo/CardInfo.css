@@ -9,16 +9,8 @@
 }
 
 
-.iconContainer{
-    height: auto;
-    width: 30%;
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
+.iconColor{
     background-color: #f3f313;
-    background-size: cover;
-    display: grid;
-    align-items: center;
-    justify-content: center;
 }
 
 .icon{

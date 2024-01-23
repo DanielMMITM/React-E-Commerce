@@ -7,11 +7,14 @@ import { useMemo } from "react";
 import './Products.css'
 import ReactPaginate from "react-paginate";
 
-const CATEGORY_1 = "women's clothing";
-const CATEGORY_2 = "men's clothing";
-const CATEGORY_3 = "jewelery";
-const CATEGORY_4 = "electronics";
 const CLEAR = '';
+
+const CATEGORIES = [
+    {filterName: "women's clothing", displayName: "Women's clothing"},
+    {filterName: "men's clothing", displayName: "Men's clothing"},
+    {filterName:  "jewelery", displayName: "Jewelry"},
+    {filterName: "electronics", displayName: "Electronics"}
+]
 
 
 export function Products({ itemsPerPage }) {
@@ -70,63 +73,52 @@ export function Products({ itemsPerPage }) {
 
     return (
         <>
-            <div className="products-main">
-                <div className="productsBody">
-                    <aside className="left">
-                        <div>
-                            <div className="filterTitleBox">
-                                <h1 className="filterTitle">Filter</h1>
-                            </div>
-                            <div className="filterOptions first">
-                                <div className="option" onClick={() => handleFilterChange(CATEGORY_1)}>
-                                    <p>Women's Clothing</p>
+            <div className="d-flex flex-column flex-sm-row justify-content-center">
+                <aside className="left flex-grow-1 m-4 m-lg-3">
+                    <div>
+                        <div className="filterTitleBox">
+                            <h1 className="filterTitle">Filter</h1>
+                        </div>
+                        <div className="filterOptions first">
+                            {CATEGORIES.map((category) => (
+                                <div className="option" onClick={() => handleFilterChange(category.filterName)}>
+                                    <p>{category.displayName}</p>
                                 </div>
-                                <div className="option" onClick={() => handleFilterChange(CATEGORY_2)}>
-                                    <p>Men's Clothing</p>
-                                </div>
-                                <div className="option" onClick={() => handleFilterChange(CATEGORY_3)}>
-                                    <p>Jewelry</p>
-                                </div>
-                                <div className="option" onClick={() => handleFilterChange(CATEGORY_4)}>
-                                    <>Electronics</>
-                                </div>
-                            </div>
-                            <div className="reset">
-                                <div className="clearbtn-box">
-                                    <button className="clearbtn" onClick={() => handleFilterChange(CLEAR)}>Clear filters</button>
-                                </div>
+                            ))}
+                        </div>
+                        <div className="reset my-4">
+                            <div className="clearbtn-box">
+                                <button className="clearbtn" onClick={() => handleFilterChange(CLEAR)}>Clear filters</button>
                             </div>
                         </div>
-                    </aside>
-                    <section className="right">
-                        {/* <div className="productsContainer">
+                    </div>
+                </aside>
+                <section className="right flex-grow-0">
+                    <div className="container text-center">
+                        <div className="d-flex flex-wrap justify-content-evenly gap-3 m-4 m-lg-3">
                             <CardProduct currentItems={currentItems} />
-                        </div> */}
-                        <div className="container text-center ">
-                            <div className="d-flex flex-wrap justify-content-evenly gap-3">
-                                <CardProduct currentItems={currentItems} />
-                            </div>
                         </div>
-                    </section>
-                </div>
-                <div className="paginationContainer">
-                    <ReactPaginate
-                        forcePage={checkFirstLoad && currentPage === 0 ? 0 : currentPage}
-                        activeClassName={'item active '}
-                        breakClassName={'item'}
-                        breakLabel={'...'}
-                        containerClassName={'pagination'}
-                        disabledClassName={'disabled-page'}
-                        marginPagesDisplayed={2}
-                        pageClassName={'item pagination-page '}
-                        nextLabel="Next >>"
-                        onPageChange={handlePageClick}
-                        pageRangeDisplayed={3}
-                        pageCount={pageCount}
-                        previousLabel="<< Previous"
-                        renderOnZeroPageCount={null}
-                    />
-                </div>
+                    </div>
+                </section>
+            </div>
+            <div className="d-flex w-100 mt-4 px-4">
+                <ReactPaginate
+                    previousClassName={'previous'}
+                    forcePage={checkFirstLoad && currentPage === 0 ? 0 : currentPage}
+                    activeClassName={'item active '}
+                    breakClassName={'item'}
+                    breakLabel={'...'}
+                    containerClassName={'pagination'}
+                    disabledClassName={'disabled-page'}
+                    marginPagesDisplayed={2}
+                    pageClassName={'item pagination-page '}
+                    nextLabel="Next >>"
+                    onPageChange={handlePageClick}
+                    pageRangeDisplayed={3}
+                    pageCount={pageCount}
+                    previousLabel="<< Previous"
+                    renderOnZeroPageCount={null}
+                />
             </div>
         </>
     );

@@ -10,7 +10,9 @@ export const CardProduct = ({ currentItems }) => {
                     <div className="card-body">
                         <h5 className="card-title">{product.title}</h5>
                         <p className="card-text">{product.description}</p>
-                        <div className='contentBtn'>
+                    </div>
+                    <div className="card-footer content-btn">
+                        <div className='d-flex flex-column justify-content-between align-items-center'>
                             <span className='price'>${product.price}</span>
                             <div className='btnBuy'>
                                 <Button

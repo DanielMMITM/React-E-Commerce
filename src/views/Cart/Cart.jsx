@@ -59,46 +59,43 @@ export const Cart = () => {
     }, [cart]);
 
     return (
-        <div className='cartbody-page'>
-            <div className="cartbody">
-                <div className="cartBody-left">
-                    <div className="cartBox">
-                        <div className="cartBox-up">
-                            <h2 className='cart-text-title'>Your shopping cart {user}</h2>
+        <div className='d-flex flex-column flex-lg-row justify-content-center'>
+            <div className="flex-grow-1 m-4 mt-md-1">
+                <div className="cartBox mt-md-5">
+                    <div className="cartBox-up">
+                        <h2 className='cart-text-title'>Your shopping cart {user}</h2>
+                    </div>
+                    <div className='cart-separator mt-2'>
+                        <h3 className='cart-text-title sub-title'>PRODUCT</h3>
+                        <h3 className='cart-text-price sub-title'>PRICE</h3>
+                    </div>
+                    <div>
+                        <CartCard product={products} productQuantity={cart.products} />
+                    </div>
+                </div>  
+            </div>
+            <div className='cart-body-right flex-grow-0'>
+                <div className='summary-box'>
+                    <div className='cart-summary'>
+                        <h3>SUMMARY</h3>
+                    </div>
+                    <div className='cart-payment'>
+                        <div className='cartpayment-title'>
+                            <h4>SUBTOTAL</h4>
                         </div>
-                        <div className='cart-separator'>
-                            <h3 className='cart-text-title sub-title'>PRODUCT</h3>
-                            <h3 className='cart-text-price sub-title'>PRICE</h3>
+                        <div className='linked-payment'>
+                            <span>Shipping</span>
+                            <span>$4.99</span>
                         </div>
-                        <div className="cartBox-down">
-                            <CartCard product={products} productQuantity={cart.products} />
-                            <span></span>
+                        <div className='linked-payment'>
+                            <span>Sales Tax</span>
+                            <span>TBD</span>
                         </div>
-                    </div>  
-                </div>
-                <div className='cartBody-right'>
-                    <div className='summary-box'>
-                        <div className='cart-summary'>
-                            <h3>SUMMARY</h3>
+                        <div className='linked-payment totalbox'>
+                            <span className='carttotal'>Estimated Total</span>
+                            <span className='totalprice'>${total}</span>
                         </div>
-                        <div className='cart-payment'>
-                            <div className='cartpayment-title'>
-                                <h4>SUBTOTAL</h4>
-                            </div>
-                            <div className='linked-payment'>
-                                <span>Shipping</span>
-                                <span>$4.99</span>
-                            </div>
-                            <div className='linked-payment'>
-                                <span>Sales Tax</span>
-                                <span>TBD</span>
-                            </div>
-                            <div className='linked-payment totalbox'>
-                                <span className='carttotal'>Estimated Total</span>
-                                <span className='totalprice'>${total}</span>
-                            </div>
-                            <Link to={"/"}><button type='button' className='paybutton'>Checkout</button></Link>
-                        </div>
+                        <Link to={"/"}><button type='button' className='paybutton'>Checkout</button></Link>
                     </div>
                 </div>
             </div>

@@ -6,27 +6,27 @@ import ig from '/src/assets/icons/insta.png';
 
 export const Footer = () => {
     return (
-        <footer className="footer">
-            <div className='footerInfo'>
-                <div className='footerLogo'>
+        <footer className="footer mt-4">
+            <div className='row footer-info'>
+                <div className='footer-logo mt-2 col-12'>
                     <h2>Cantera Digital SHOP</h2>
                 </div>
-                <div className='footerContainers'>
-                    <div className='containerSupport'>
+                <div className='d-flex footer-containers row mb-5'>
+                    <div className='footer-element col-6 col-md-3 align-items-center'>
                         <span className='fooTitle'>RESOURCES</span>
                         <span className='fooTitle'>FAQ</span>
                         <span className='fooTitle'>SUBMIT A TICKET</span>
                     </div>
-                    <div className='containerServices'>
+                    <div className='footer-element col-6 col-md-3 align-items-center'>
                         <span className='fooTitle'>SERVICES</span>
                         <span className='fooTitle'>SUBSCRIPTION</span>
                     </div>
-                    <div className='containerExtra'>
+                    <div className='footer-element col-6 col-md-3 align-items-center'>
                         <span className='fooTitle'>AFFILIATES</span>
                         <span className='fooTitle'>WIKI</span>
                         <span className='fooTitle'>SHOWCASE</span>
                     </div>
-                    <div className='containerContact'>
+                    <div className='footer-element col-6 col-md-3 align-items-center'>
                         <span className='fooTitle'>ABOUT US</span>
                         <span className='fooTitle'>shop@cantera.com</span>
                         <span className='fooTitle'>(443) 4-32-12-31</span>

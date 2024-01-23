@@ -69,7 +69,7 @@ export function Login() {
                             <div className='errorbox'>
                                 <span href="#" id='errortext'>{ error }</span>
                             </div>
-                            <div className='btnContainer boxbtn'>
+                            <div className='btn-container boxbtn mt-3'>
                                 <button className='button' type='sumbit'>Login</button>
                             </div>
                         </form>
