@@ -99,7 +99,7 @@
     height: 60px;
     position: absolute;
     right: 0;
-    width: 150px;
+    width: 90px;
     cursor: pointer;
     transition: 100ms linear;
 }
@@ -143,7 +143,7 @@
     height: 60px;
     left: 0;
     position: absolute;
-    width: 150px;
+    width: 100px;
     cursor: pointer;
     transition: 100ms linear;
     color: #000000 !;

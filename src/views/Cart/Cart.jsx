@@ -58,6 +58,10 @@ export const Cart = () => {
         handleTotal();
     }, [cart]);
 
+    const handlePayment =  () => {
+        alert("Thanks for buying");
+    };
+
     return (
         <div className='d-flex flex-column flex-lg-row justify-content-center'>
             <div className="flex-grow-1 m-4 mt-md-1">
@@ -95,7 +99,7 @@ export const Cart = () => {
                             <span className='carttotal'>Estimated Total</span>
                             <span className='totalprice'>${total}</span>
                         </div>
-                        <Link to={"/"}><button type='button' className='paybutton'>Checkout</button></Link>
+                        <Link to={'/'} onClick={handlePayment}><button type='button' className='paybutton'>Checkout</button></Link>
                     </div>
                 </div>
             </div>

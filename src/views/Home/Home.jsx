@@ -53,7 +53,7 @@ export function Home() {
                         <p>Lorem ipsum dolor sit amet consectetur adipiscing elit, nascetur montes ad odio augue pretium, sodales maecenas morbi tincidunt dictum leo. Mauris urna malesuada quis tellus est bibendum placerat eget laoreet pharetra consequat facilisis, varius commodo vivamus vulputate nisi viverra mattis ligula interdum vestibulum sociosqu. Lacus nibh rutrum sed suscipit luctus massa platea, sagittis id torquent semper per quam fusce, aliquet netus condimentum hac conubia nam, blandit lectus accumsan sem lacinia fermentum. Congue praesent taciti tempor potenti sapien tempus metus lobortis neque porta, molestie aptent quisque egestas eu penatibus gravida ante. Nostra volutpat habitant tristique eros aliquam purus mus non arcu, cursus libero etiam magna erat diam turpis risus himenaeos proin, ullamcorper magnis suspendisse venenatis et ridiculus fames sociis. Dui primis nisl tortor a velit euismod cras ac ut nec, nullam vehicula curae integer natoque felis posuere eleifend duis. Curabitur dictumst vitae justo nunc ultricies vel, auctor convallis fringilla dignissim scelerisque senectus ornare, habitasse mollis cubilia pellentesque enim. Faucibus donec phasellus litora dapibus porttitor rhoncus elementum sollicitudin at pulvinar, class aenean feugiat parturient cum mi hendrerit inceptos imperdiet dis, </p>
                         <div className='btn-container pt-4'>
                             <Button
-                                route="/login"
+                                route="/products"
                                 text="Check out"
                             >
                             </Button>
