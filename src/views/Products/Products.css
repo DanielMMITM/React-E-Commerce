@@ -4,11 +4,11 @@
     box-shadow: inset 0 0 20px #2B2D42;
 }
 
-.filterTitleBox{
+.filter-title-box{
     border-bottom: 1px solid#4c4e50;
 }
 
-.filterTitle{
+.filter-title{
     color: #000000;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
@@ -19,7 +19,6 @@
 }
 
 .option{
-    /* height: 2rem; */
     color: #2B2D42;
     border-bottom: 2px solid #2B2D42;
     padding: 1rem;
@@ -53,15 +52,6 @@
 .clearbtn:hover{
     transform: scale(1.05);
     box-shadow: 0 0 10px#2B2D42;
-}
-
-.productsContainer{
-    padding: 2rem;
-    display: flex;
-    flex-direction: row;
-    margin: 1rem 2rem 0;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
 }
 
 .pagination-container{

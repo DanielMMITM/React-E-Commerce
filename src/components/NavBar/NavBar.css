@@ -10,23 +10,12 @@
     margin-left: 3rem;
 }
 
-.nav-menu {
-    font-size: 1.1rem;
-    padding: 1rem;
+.nav-animation{
+    transition: transform 100ms ease-in-out;
 }
 
-.nav-menu ul {
-    list-style: none;
-    flex-direction: row;
-}
-
-.nav-menu li{
-    margin-right: 4rem;
-    transition: transform 330ms ease-in-out;
-}
-
-.nav-menu li:hover {
-    transform: scale(1.3);
+.nav-animation:hover {
+    transform: scale(1.2);
     cursor: pointer;
 }
 

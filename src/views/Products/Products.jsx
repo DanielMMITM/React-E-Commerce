@@ -76,8 +76,8 @@ export function Products({ itemsPerPage }) {
             <div className="d-flex flex-column flex-sm-row justify-content-center">
                 <aside className="left flex-grow-1 m-4 m-lg-3">
                     <div>
-                        <div className="filterTitleBox">
-                            <h1 className="filterTitle">Filter</h1>
+                        <div className="filter-title-box">
+                            <h1 className="filter-title">Filter</h1>
                         </div>
                         <div className="filterOptions first">
                             {CATEGORIES.map((category) => (
@@ -87,7 +87,7 @@ export function Products({ itemsPerPage }) {
                             ))}
                         </div>
                         <div className="reset my-4">
-                            <div className="clearbtn-box">
+                            <div>
                                 <button className="clearbtn" onClick={() => handleFilterChange(CLEAR)}>Clear filters</button>
                             </div>
                         </div>

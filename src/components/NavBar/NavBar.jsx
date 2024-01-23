@@ -23,26 +23,26 @@ export const NavBar = () => {
                     <ul className="navbar-nav mb-2 mb-lg-0 w-100 d-flex justify-content-end me-5">
                         {user !== null ? (
                             <li className="nav-item me-3">
-                                <span className='nav-link text-white'> <strong>Welcome! { user }</strong></span>
+                                <span className='nav-link text-white nav-animation'> <strong>Welcome! { user }</strong></span>
                             </li>
                         ) : ''}
                         <li className="nav-item me-3">
-                            <Link className='nav-link text-white' to={"/"}>Home</Link>
+                            <Link className='nav-link text-white nav-animation' to={"/"}>Home</Link>
                         </li>
                         <li className="nav-item me-3">
-                            <Link className='nav-link text-white' to={"/products"}>Products</Link>
+                            <Link className='nav-link text-white nav-animation' to={"/products"}>Products</Link>
                         </li>
                         {user !== null ? (
                             <li className='nav-item me-3'>
-                                <Link className='nav-link text-white' onClick={logout} to={"/"}>Logout</Link>
+                                <Link className='nav-link text-white nav-animation' onClick={logout} to={"/"}>Logout</Link>
                             </li>
                         ) : 
                             <li className='nav-item me-3'>
-                                <Link className='nav-link text-white' to={"/login"}>Login</Link>
+                                <Link className='nav-link text-white nav-animation' to={"/login"}>Login</Link>
                             </li>
                         }
                         <li className="nav-item me-3">
-                            <Link className='nav-link' to={"/cart"}>
+                            <Link className='nav-link nav-animation' to={"/cart"}>
                                 <Cart4 color="white" size={20} />
                             </Link>
                         </li>

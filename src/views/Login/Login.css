@@ -1,10 +1,10 @@
-.mainContainer{
+.main-container{
     display:grid;
     align-items: center;
     justify-content: center;
 }
 
-.containerForm {
+.container-form {
     background: linear-gradient(300deg, #F8F7F9 80%,#f3f313 50%);
     opacity: 0.8;
     border: 3px solid #2B2D42;
@@ -66,14 +66,9 @@ input::placeholder{
     align-items: center;
 }
 
-
 #errortext{
     text-align: center;
     color: red;
     width: 100%;
 
-}
-
-.boxbtn{
-    margin-top: -1rem!important;
 }

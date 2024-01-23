@@ -44,7 +44,7 @@ export function Home() {
                     </CardInfo>
                 </div>
             </header>
-            <div className='mainBody flex-column mx-5'>
+            <div className='mainBody flex-column mx-5 text-center'>
                 <h1>Check our merchandising</h1>
                 <div className='d-flex flex-column flex-lg-row'>
                     <img src={categoryImg} className="img-fluid  mx-auto d-block flex-grow-1 merchandising-image"/>

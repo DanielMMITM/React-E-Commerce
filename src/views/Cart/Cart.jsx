@@ -66,8 +66,8 @@ export const Cart = () => {
                         <h2 className='cart-text-title'>Your shopping cart {user}</h2>
                     </div>
                     <div className='cart-separator mt-2'>
-                        <h3 className='cart-text-title sub-title'>PRODUCT</h3>
-                        <h3 className='cart-text-price sub-title'>PRICE</h3>
+                        <h3 className='cart-text-title sub-title'>Product</h3>
+                        <h3 className='cart-text-price sub-title'>Price</h3>
                     </div>
                     <div>
                         <CartCard product={products} productQuantity={cart.products} />

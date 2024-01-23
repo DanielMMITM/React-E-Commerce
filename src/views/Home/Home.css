@@ -1,11 +1,3 @@
-.mainAd {
-    height: 70vh;
-    background-image: url('/src/assets/img/adxbig3.jpg');
-    background-size: cover;
-    text-align: center;
-    margin-top: -2rem;
-}
-
 .title-animation {
     -webkit-animation: breathing 3s ease-out infinite normal;
     animation: breathing 3s ease-out infinite normal;
@@ -93,42 +85,11 @@
     }
 }
 
-header .cards{
-    justify-items: center;
-    align-self: center;
-    justify-self: center;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.cards{
-    margin: 1rem 4rem;
-    width: 90%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
-
-/* .mainBody{
-    display: flex;
-    flex-direction: column;
-} */
-
 .mainBody h1{
     padding: 1rem;
     border-radius: 10px;
     background-color: #2B2D42;   
     color: #F8F7F9;
-}
-
-/* .content{
-    display: flex;
-    flex-direction: row;
-    height: auto;
-} */
-
-.containerLeft{
-    width: 50%;
 }
 
 .merchandising-image {
@@ -141,29 +102,8 @@ header .cards{
     }
 }
 
-.containerLeft img{
-    width: 100%;
-    height: 100%;
-}
-
-.containerRight{
-    width:50%;
-    display: flex;
-    flex-direction: column;
-    margin-left: 3rem;
-    border-bottom: 3px dashed #2B2D42;
-    justify-content: center;
-    align-items: center;
-}
-
-.containerRight h2{
-    text-align: center;
-    border-width: 4px;
-}
-
 p{
     text-align: justify;
-    font-size: medium;
 }
 
 .btn-container {

@@ -16,7 +16,6 @@ export const CardProduct = ({ currentItems }) => {
                             <span className='price'>${product.price}</span>
                             <div className='btnBuy'>
                                 <Button
-                                    route='/'
                                     text="Add to cart"
                                 >
                                 </Button>

@@ -7,8 +7,8 @@ export function Login() {
     const navigate = useNavigate();
     const location = useLocation();
     const [error, setError] = useState('');
-    const [username, setUsername] = useState('johnd');
-    const [password, setPassword] = useState('m38rmF$');
+    const [username, setUsername] = useState('');
+    const [password, setPassword] = useState('');
     const [user, setUser] = useContext(UserContext);
 
     const handleSubmit = async (e) => {
@@ -37,7 +37,7 @@ export function Login() {
                 }
             }
             else {
-                setError("Your username or password doesn't match");
+                setError("Invalid credentials. Try again");
                 setUsername('');
                 setPassword('');
             }
@@ -53,8 +53,8 @@ export function Login() {
     
     return (
         <>
-            <div className='mainContainer'>
-                <div className="containerForm">
+            <div className='main-container'>
+                <div className="container-form">
                     <div id='content'>
                         <h1>Welcome </h1>
                         <form onSubmit={handleSubmit}>
