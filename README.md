@@ -1,8 +1,15 @@
-# React + Vite
+# E-Commerce simulation
+This react app uses Fake Store API to retrieve the products and carts. At the moment it's not possible to add your own products and retrieve it.
+You can get more information by checking the documentation of the API: https://fakestoreapi.com/docs
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Login
+Here are some users you can try to log in
+|Username|Password|
+|---|---|
+|johnd|m38rmF$|
+|mor_2314|83r5^_|
+|kevinryan|kev02937@|
+|donero|ewedon|
 
-Currently, two official plugins are available:
+Find the live preview here: https://canterashop.netlify.app/
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
