@@ -12,4 +12,3 @@ Here are some users you can try to log in
 |donero|ewedon|
 
 Find the live preview here: https://canterashop.netlify.app/
-
