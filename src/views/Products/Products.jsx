@@ -75,25 +75,23 @@ export function Products({ itemsPerPage }) {
         <>
             <div className="d-flex flex-column flex-sm-row justify-content-center">
                 <aside className="left flex-grow-1 m-4 m-lg-3">
-                    <div>
-                        <div className="filter-title-box">
-                            <h1 className="filter-title">Filter</h1>
-                        </div>
-                        <div className="filterOptions first">
-                            {CATEGORIES.map((category) => (
-                                <div className="option" onClick={() => handleFilterChange(category.filterName)}>
-                                    <p>{category.displayName}</p>
-                                </div>
-                            ))}
-                        </div>
-                        <div className="reset my-4">
-                            <div>
-                                <button className="clearbtn" onClick={() => handleFilterChange(CLEAR)}>Clear filters</button>
+                    <div className="filter-title-box">
+                        <h1 className="filter-title">Filter</h1>
+                    </div>
+                    <div className="filterOptions first">
+                        {CATEGORIES.map((category) => (
+                            <div className="option" onClick={() => handleFilterChange(category.filterName)}>
+                                <p>{category.displayName}</p>
                             </div>
+                        ))}
+                    </div>
+                    <div className="reset my-4">
+                        <div>
+                            <button className="clearbtn p-2" onClick={() => handleFilterChange(CLEAR)}>Clear filters</button>
                         </div>
                     </div>
                 </aside>
-                <section className="right flex-grow-0">
+                <section className="flex-grow-0">
                     <div className="container text-center">
                         <div className="d-flex flex-wrap justify-content-evenly gap-3 m-4 m-lg-3">
                             <CardProduct currentItems={currentItems} />

@@ -2,7 +2,7 @@ import './CardInfo.css'
 
 export const CardInfo = ({ title, icon, text }) => {
     return (
-        <div className='card col-sm-4 flex-grow-1 w-25'>
+        <div className='card col-sm-4 flex-grow-1 card-container'>
             <div className='h-100'>
                 <div className='iconColor'>
                     <img src={icon} className='card-img-top img-fluid w-50 mx-auto d-block'/>

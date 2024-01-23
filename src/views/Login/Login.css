@@ -2,6 +2,7 @@
     display:grid;
     align-items: center;
     justify-content: center;
+    width: 100%;
 }
 
 .container-form {
@@ -9,17 +10,32 @@
     opacity: 0.8;
     border: 3px solid #2B2D42;
     border-radius: 10px;
-    width: 70vh;
+    width: 77vh;
     height: 70vh;
     margin-top: 8%;
     box-sizing: border-box;
     box-shadow: 0 0 25px #2B2D42;
 }
 
+@media screen and (max-width: 566px) {
+
+    .container-form {
+        background: linear-gradient(300deg, #F8F7F9 80%, #f3f313 50%);
+        opacity: 0.8;
+        border: 3px solid #2B2D42;
+        border-radius: 10px;
+        margin-top: 8%;
+        width: 100%;
+        box-sizing: border-box;
+        box-shadow: 0 0 25px #2B2D42;
+    }
+}
+
 #content{
     padding: 5rem;
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
 
 h1{

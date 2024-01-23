@@ -20,7 +20,7 @@ export function Home() {
                 <div class="card text-bg-dark">
                     <img src={mainImage} className='image-fluid' alt="..."/>
                     <div class="card-img-overlay">
-                        <h5 class="card-title text-center pt-3 title-animation">Get your favorite products at a small cost</h5>
+                        <h5 class="card-title text-center pt-1 pt-sm-3 title-animation">Get your favorite products at a small cost</h5>
                     </div>
                 </div>
                 <div className='d-flex flex-column flex-sm-row justify-content-evenly gap-3 m-5'>

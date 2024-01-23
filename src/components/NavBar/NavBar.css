@@ -15,7 +15,7 @@
 }
 
 .nav-animation:hover {
-    transform: scale(1.2);
+    text-decoration: underline;
     cursor: pointer;
 }
 

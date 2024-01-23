@@ -8,6 +8,15 @@
     box-shadow: 0 0 10px#2B2D42;
 }
 
+.card-container {
+    width: 25%;
+}
+
+@media screen and (max-width: 576px) {
+    .card-container {
+        width: 100%;
+    }
+}
 
 .iconColor{
     background-color: #f3f313;
