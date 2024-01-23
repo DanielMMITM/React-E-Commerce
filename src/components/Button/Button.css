@@ -8,6 +8,7 @@
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     cursor: pointer;
     transition: 100ms ease-in-out;
+    width: 7rem;
 }
 
 .button:hover{
