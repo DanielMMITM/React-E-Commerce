@@ -11,7 +11,7 @@ const GET_PRODUCT= "https://fakestoreapi.com/products/";
 
 export const Cart = () => {
 
-    let randomCart = Math.floor(Math.random() * 6) + 1;
+    let randomCart = Math.floor(Math.random() * 7) + 1;
 
     const [user] = useContext(UserContext);
     const [cart, setCart] = useState('');
