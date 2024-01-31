@@ -10,5 +10,3 @@ Here are some users you can try to log in
 |mor_2314|83r5^_|
 |kevinryan|kev02937@|
 |donero|ewedon|
-
-Find the live preview here: https://canterashop.netlify.app/
